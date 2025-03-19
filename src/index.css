@@ -119,6 +119,30 @@
     transform: rotate(180deg);
 }
 
+.l-corners::after{
+  content: '';
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: -80px;
+
+    box-shadow: 40px -40px rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.l-corners::before{
+  content: '';
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+
+    box-shadow: 40px -40px rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
 @media only screen and (max-width: 1279px){
   .r-corners::before{
     width: 60px;
@@ -210,3 +234,12 @@
     transform: translateX(0);
   }
 }
+
+.dotted{
+  background: radial-gradient(circle, #898989 7px, transparent 26%);
+  background-size: 35px 35px;
+  background-color: #ffffff;
+  opacity: 1;
+  filter: blur(0.7px);
+}
+

@@ -1,8 +1,11 @@
 import React from 'react'
+import BusinessDesc from '../components/home/BusinessDesc'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+      <BusinessDesc/>
+    </>
   )
 }
 
