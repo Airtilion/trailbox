@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "plytysandwich", element: <Sandwich /> },
+      { path: "plyty-sandwich", element: <Sandwich /> },
       { path: "zestawy", element: <Containers /> },
       { path: "cnc", element: <Cnc /> },
       { path: "realizacje", element: <Portfolio /> },

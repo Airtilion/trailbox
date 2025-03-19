@@ -11,7 +11,7 @@ const elements = [
     },
     {
         name: 'Płyty sandwich',
-        link: '/plytysandwich',
+        link: '/plyty-sandwich',
     },
     {
         name: 'Zestawy kontenerowe',
