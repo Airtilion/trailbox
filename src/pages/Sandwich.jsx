@@ -1,12 +1,20 @@
 import React from 'react'
 import Cards from '../components/sandwich/Cards'
 import Precision from '../components/sandwich/Precision'
+import { Outlet, useOutlet } from 'react-router-dom'
 
 const Sandwich = () => {
+  const outlet = useOutlet();
   return (
     <>
-      <Cards />
-      <Precision />
+      {!outlet ?
+        <>
+          <Cards />
+          <Precision />
+        </>
+        :
+        <Outlet />
+      }
     </>
   )
 }

@@ -11,32 +11,32 @@ import gewebe from '../../assets/images/sandwich/cards/gewebe-small.webp'
 const cardsItems = [
     {
         title: "Panel Super Plus",
-        link: "/",
+        link: "panel-super-plus",
         img: superPlus
     },
     {
         title: "Panel High Gloss",
-        link: "/",
+        link: "panel-high-gloss",
         img: highGloss
     },
     {
         title: "Panel High Strength Extreme",
-        link: "/",
+        link: "panel-high-strength-extreme",
         img: highStrength
     },
     {
         title: "Panel Water Rain Drop Effect",
-        link: "/",
+        link: "panel-water-rain",
         img: waterRain
     },
     {
         title: "Panel High Impact",
-        link: "/",
+        link: "panel-high-impact",
         img: highImpact
     },
     {
         title: "Panel Gewebe",
-        link: "/",
+        link: "panel-gewebe",
         img: gewebe
     }
 ]

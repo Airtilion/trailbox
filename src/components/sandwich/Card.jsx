@@ -14,7 +14,7 @@ const Card = ({ card }) => {
                     <h3 className='pt-[10px] px-[10px] text-[20px] font-semibold text-center max-lg:text-[18px]'>{card.title}</h3>
                 </div>
 
-                <Link to={card.link}>
+                <Link to={`/plyty-sandwich/${card.link}`}>
                     <button className='absolute right-0 bottom-0 cursor-pointer bg-[#898989] rounded-[20px] font-light text-[16px] text-white w-[155px] max-xs:w-[150px] h-[45px] max-xs:h-[40px] shadow-[0_4px_20px_rgba(0,0,0,0.25)] overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#676767] before:scale-x-0 before:origin-left before:transition-transform before:duration-1000 hover:before:scale-x-100'>
                         <span className='relative z-10'>Skonfiguruj</span>
                     </button>
