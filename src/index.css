@@ -1,169 +1,174 @@
 @import "tailwindcss";
 
-@font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Black"),
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Black"),
     url('./assets/fonts/Poppins-Black.ttf');
-    font-weight: 900;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-ExtraBold"),
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-ExtraBold"),
     url('./assets/fonts/Poppins-ExtraBold.ttf');
-    font-weight: 800;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Bold"),
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Bold"),
     url('./assets/fonts/Poppins-Bold.ttf');
-    font-weight: 700;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-SemiBold"),
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-SemiBold"),
     url('./assets/fonts/Poppins-SemiBold.ttf');
-    font-weight: 600;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Medium"),
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Medium"),
     url('./assets/fonts/Poppins-Medium.ttf');
-    font-weight: 500;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Regular"),
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Regular"),
     url('./assets/fonts/Poppins-Regular.ttf');
-    font-weight: 400;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Light"),
-    url('./assets/fonts/Poppins-Light.ttf') ;
-    font-weight: 300;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-ExtraLight"),
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Light"),
+    url('./assets/fonts/Poppins-Light.ttf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-ExtraLight"),
     url('./assets/fonts/Poppins-ExtraLight.ttf');
-    font-weight: 200;
-  }
-  
-  @font-face{
-    font-family: "Poppins";
-    src:local("Poppins-Thin"),
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Thin"),
     url('./assets/fonts/Poppins-Thin.ttf');
-    font-weight: 100;
-  }
-  
-  *:not(svg, path) {  
-    font-family: 'Poppins';
-  }
-
-  #detach-button-host{display: none !important;}
-
-.r-corners::before{
-    content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 0;
-    right: -80px;
-
-    box-shadow: -40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
+  font-weight: 100;
 }
 
-.r-corners::after{
-    content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    bottom: -80px;
-    left: 0;
-
-    box-shadow: -40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
+*:not(svg, path) {
+  font-family: 'Poppins';
 }
 
-.r-corners-b::before{
-    content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: -80px;
-    right: 0;
-
-    box-shadow: -40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
-    transform: rotate(180deg);
+#detach-button-host {
+  display: none !important;
 }
 
-.r-corners-b::after{
-    content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    bottom: 0;
-    left: -80px;
-
-    box-shadow: -40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
-    transform: rotate(180deg);
-}
-
-.l-corners::after{
+.r-corners::before {
   content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 0;
-    left: -80px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: -80px;
 
-    box-shadow: 40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
+  box-shadow: -40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
 }
 
-.l-corners::before{
+.r-corners::after {
   content: '';
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    bottom: -80px;
-    right: 0;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
 
-    box-shadow: 40px -40px rgb(255, 255, 255);
-    border-radius: 50%;
+  box-shadow: -40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
 }
 
-@media only screen and (max-width: 1279px){
-  .r-corners::before{
+.r-corners-b::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: -80px;
+  right: 0;
+
+  box-shadow: -40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+
+.r-corners-b::after {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+
+  box-shadow: -40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+
+.l-corners::after {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: -80px;
+
+  box-shadow: 40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+.l-corners::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+
+  box-shadow: 40px -40px rgb(255, 255, 255);
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 1279px) {
+  .r-corners::before {
     width: 60px;
     height: 60px;
     right: -60px;
     box-shadow: -30px -30px rgb(255, 255, 255);
   }
-  .r-corners::after{
+
+  .r-corners::after {
     width: 60px;
     height: 60px;
     bottom: -60px;
     box-shadow: -30px -30px rgb(255, 255, 255);
 
   }
-  .r-corners-b::before{
+
+  .r-corners-b::before {
     width: 60px;
     height: 60px;
     top: -60px;
     box-shadow: -30px -30px rgb(255, 255, 255);
   }
-  .r-corners-b::after{
+
+  .r-corners-b::after {
     width: 60px;
     height: 60px;
     left: -60px;
@@ -174,7 +179,7 @@
 
 /*---linie do "Dowiedz się wiecej"---*/
 
-.bounce-lines::before{
+.bounce-lines::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -185,7 +190,7 @@
   background-color: white;
 }
 
-.bounce-lines::after{
+.bounce-lines::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -198,18 +203,18 @@
 
 /* ---------- menu - hamburger ---------- */
 
-.hamburger-menu.active > span:first-child{
+.hamburger-menu.active>span:first-child {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
   position: absolute;
 }
 
-.hamburger-menu.active > span:nth-child(2){
-    display: none;
+.hamburger-menu.active>span:nth-child(2) {
+  display: none;
 }
 
-.hamburger-menu.active > span:last-child{
+.hamburger-menu.active>span:last-child {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-45deg);
@@ -218,7 +223,7 @@
 
 /* ---------- menu - mobile ---------- */
 
-.menu-mobile li{
+.menu-mobile li {
   animation: showMenu 1s ease-in-out forwards;
   transform: translateX(-50px);
   opacity: 0;
@@ -229,13 +234,14 @@
     opacity: 0;
     transform: translateX(-50px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-.dotted{
+.dotted {
   background: radial-gradient(circle, #898989 7px, transparent 26%);
   background-size: 35px 35px;
   background-color: #ffffff;
@@ -243,3 +249,11 @@
   filter: blur(0.7px);
 }
 
+/* ---------- kafelki panele sandwich ---------- */
+.dropShadow-custom{
+  filter: drop-shadow(0 4px 20px #00000040);
+}
+
+.clip-custom {
+  clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');
+}
