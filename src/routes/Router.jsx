@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { index: true, element: <Home /> },
-      { path: "plyty-sandwich", element: <Sandwich />, children: [
+      { path: "/plyty-sandwich", element: <Sandwich />, children: [
         {path: "panel-super-plus", element: <SuperPlus />},
         {path: "panel-high-gloss", element: <HighGloss />},
         {path: "panel-high-strength-extreme", element: <HighStrengthExtreme />},
