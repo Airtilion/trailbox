@@ -281,9 +281,7 @@
 }
 
 /* ---------- kafelki panele sandwich ---------- */
-.dropShadow-custom {
-  filter: drop-shadow(0 4px 10px #00000040);
-}
+.dropShadow-custom {filter: drop-shadow(0 4px 10px #00000040);}
 
 .clip-custom {
   clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');
