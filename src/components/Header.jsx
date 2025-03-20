@@ -34,8 +34,8 @@ const Header = () => {
         </div>
 
         <div className='absolute top-[50%] left-[128px] max-xl:left-[64px] max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:w-[90%]'>
-          <h1 className='text-[70px] text-white font-extrabold z-20 max-xl:text-[55px] max-lg:text-[40px] max-sm:text-center max-sm:text-[30px]'>PŁYTY WARSTWOWE</h1>
-          <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px]'>dla wielu zastosowań</p>
+          <h1 className='text-[70px] text-white font-extrabold z-20 max-xl:text-[55px] max-lg:text-[40px] max-sm:text-center max-sm:text-[30px] left-loading'>PŁYTY WARSTWOWE</h1>
+          <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px] left-loading delay-500'>dla wielu zastosowań</p>
         </div>
 
         <button className='w-[250px] h-[55px] rounded-full z-20 bg-[#898989] hover:bg-[#676767] duration-300 cursor-pointer absolute bottom-0 right-0 flex justify-center items-center gap-[8px] shadow-[0px_4px_20px_#00000040] max-xl:w-[220px] max-md:hidden'>

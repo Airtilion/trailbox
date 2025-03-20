@@ -4,12 +4,12 @@ import logo from '../assets/images/logo.svg'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const elements = [
-    { name: 'O nas', link: '#onas' },
+    { name: 'O nas', link: '/#onas' },
     { name: 'Płyty sandwich', link: '/plyty-sandwich' },
     { name: 'Zestawy kontenerowe', link: '/zestawy' },
     { name: 'Usługa CNC', link: '/cnc' },
     { name: 'Realizacje', link: '/realizacje' },
-    { name: 'Kontakt', link: '#kontakt' }
+    { name: 'Kontakt', link: '/#kontakt' }
 ]
 
 const Navbar = () => {
@@ -74,7 +74,7 @@ const Navbar = () => {
             </div>
 
             <nav
-                className={`fixed z-60 transition-all duration-1000 rounded-br-[40px] bg-white ${
+                className={`fixed z-60 transition-all duration-1500 rounded-br-[40px] bg-white ${
                     isScrolled
                         ? 'w-full shadow !px-[96px] top-0 h-[120px] animate-header !ml-0 max-sm:!justify-start max-sm:!px-[32px]'
                         : 'w-[calc(80%-100px)] h-[128px] mx-[50px] pr-[32px] top-[32px] animate-header-reverse'

@@ -2,9 +2,11 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const OfferTile = ({title, desc, img, link}) => {
+const OfferTile = ({title, desc, img, link, isVisible, index}) => {
   return (
-    <div className='w-[392px] h-[500px] relative flex flex-col justify-end gap-[8px] p-[32px] drop-shadow-[0px_4px_10px_#00000040] max-2xl:w-[312px] max-lg:w-[600px] max-md:w-[392px] max-sm:w-[290px]'>
+    <div className={`w-[392px] h-[500px] relative flex flex-col justify-end gap-[8px] p-[32px] drop-shadow-[0px_4px_10px_#00000040] max-2xl:w-[312px] max-lg:w-[600px] max-md:w-[392px] max-sm:w-[290px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}`}
+      style={{transitionDelay: 200*index + 'ms'}}
+    >
         <h3 className='text-[25px] font-bold text-white relative z-30 max-sm:text-[20px]'>{title}</h3>
         <p className='text-[16px] text-white font-ligh z-40 max-sm:text-[14px]'>{desc}</p>
 

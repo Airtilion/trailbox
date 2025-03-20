@@ -265,7 +265,6 @@
 .dotted {
   background: radial-gradient(circle, #898989 7px, transparent 26%);
   background-size: 35px 35px;
-  background-color: #ffffff;
   opacity: 1;
   filter: blur(0.7px);
 }
@@ -283,18 +282,11 @@
 /* ---------- kafelki panele sandwich ---------- */
 .dropShadow-custom {filter: drop-shadow(0 4px 10px #00000040);}
 
-.clip-custom {
-  clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');
-}
-
-.custom-width {
-  width: 370px;
-}
+.clip-custom {clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');}
+.custom-width {width: 370px;}
 
 @media only screen and (max-width: 450px) {
-  .clip-custom {
-    clip-path: path('M 13 0 L 226 0 A 17 17 0 0 1 290 17 L 290 207 A 17 17 0 0 1 270 224 L 146 224 A 17 17 0 0 0 133 240 L 133 253 A 17 17 0 0 1 120 270 L 13 270 A 17 17 0 0 1 0 253 L 0 17 A 17 17 0 0 1 13 0 Z');
-  }
+  .clip-custom {clip-path: path('M 13 0 L 226 0 A 17 17 0 0 1 290 17 L 290 207 A 17 17 0 0 1 270 224 L 146 224 A 17 17 0 0 0 133 240 L 133 253 A 17 17 0 0 1 120 270 L 13 270 A 17 17 0 0 1 0 253 L 0 17 A 17 17 0 0 1 13 0 Z');}
 }
 
 /* --- kafleki oferta --- */
@@ -361,6 +353,7 @@
 }
 
 /* Przykładowe media queries – dostosuj progi i wartości do swoich klas Tailwind */
+
 @media (max-width: 1536px) { /* max-2xl */
   :root {
     --nav-top-default: 32px;
@@ -425,9 +418,54 @@
 }
 
 .animate-header {
-  animation: headerAnimation 0.6s ease-out forwards;
+  animation: headerAnimation 1s ease-out forwards;
 }
 
 .animate-header-reverse {
-  animation: headerAnimationReverse 0.6s ease-out forwards;
+  animation: headerAnimationReverse 1s ease-out forwards;
+}
+
+/*---animacje ładowania---*/
+
+.element-visible-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.element-hidden-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.element-visible-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.element-hidden-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.element-visible-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.element-hidden-bottom {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.left-loading{
+  animation: leftLoading 1s ease-in-out;
+}
+
+@keyframes leftLoading {
+  from{
+    transform: translate(-50px);
+  }
+  to{
+    transform: translateX(0);
+  }
 }

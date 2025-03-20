@@ -25,6 +25,7 @@ import c2_xs from '../../assets/images/home/whyus/wh-2-xs.webp'
 import c3_xs from '../../assets/images/home/whyus/wh-3-xs.webp'
 import c4_xs from '../../assets/images/home/whyus/wh-4-xs.webp'
 import WhyUsTile from './WhyUsTile'
+import useIntersectionObserver from '../../hooks/useObserver'
 
 const elements = [
   {
@@ -50,20 +51,22 @@ const elements = [
 ]
 
 const WhyUs = () => {
+  const [ ref, isVisible ] = useIntersectionObserver();
+
   return (
     <section className='w-full'>
       <h2 className='text-[30px] font-semibold w-[1240px] mx-auto max-xl:w-[960px] max-lg:w-[90%] max-md:text-[25px]'><span className='text-[#898989]'>Dlaczego</span> warto nam zufać?</h2>
       <p className='text-[16px] font-light mb-[64px] w-[1240px] mx-auto max-xl:w-[960px] max-lg:w-[90%] max-md:text-[14px]'>Tworzymy solidne rozwiązania, doradzamy najlepsze opcje i zawsze jesteśmy do Twojej dyspozycji. <br /> Dowiedz się, dlaczego warto nam zaufać!</p>
 
-      <article className='flex flex-col gap-[32px] max-lg:gap-[16px] w-[1240px] mx-auto max-xl:w-[960px] max-lg:w-[700px] max-md:w-[400px] max-xs:!w-[290px]'>
+      <article ref={ref} className='flex flex-col gap-[32px] max-lg:gap-[16px] w-[1240px] mx-auto max-xl:w-[960px] max-lg:w-[700px] max-md:w-[400px] max-xs:!w-[290px]'>
         <div className='relative w-full h-[360px] max-lg:h-[660px] max-md:h-[516px]'>
-          <WhyUsTile title={elements[0].title} desc={elements[0].desc} img={elements[0].img} index={0}/>
-          <WhyUsTile title={elements[1].title} desc={elements[1].desc} img={elements[1].img} index={1}/>
+          <WhyUsTile title={elements[0].title} desc={elements[0].desc} img={elements[0].img} index={0} isVisible={isVisible}/>
+          <WhyUsTile title={elements[1].title} desc={elements[1].desc} img={elements[1].img} index={1} isVisible={isVisible}/>
         </div>
 
         <div className='relative w-full h-[360px] max-lg:h-[660px] max-md:h-[516px]'>
-          <WhyUsTile title={elements[2].title} desc={elements[2].desc} img={elements[2].img} index={2}/>
-          <WhyUsTile title={elements[3].title} desc={elements[3].desc} img={elements[3].img} index={3}/>
+          <WhyUsTile title={elements[2].title} desc={elements[2].desc} img={elements[2].img} index={2} isVisible={isVisible}/>
+          <WhyUsTile title={elements[3].title} desc={elements[3].desc} img={elements[3].img} index={3} isVisible={isVisible}/>
         </div>
       </article>
     </section>
