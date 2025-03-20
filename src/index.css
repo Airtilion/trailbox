@@ -242,7 +242,9 @@
 
 /* ---------- menu - mobile ---------- */
 
-.menu-mobile li {
+.menu-mobile li,
+.menu-mobile button,
+.menu-mobile div {
   animation: showMenu 1s ease-in-out forwards;
   transform: translateX(-50px);
   opacity: 0;
@@ -352,4 +354,82 @@
   .clip-contact{
     clip-path: path('M 40 0 L 250 0 A 40 40 0 0 1 290 40 L 290 835 A 40 40 0 0 1 250 875 L 138 875 A 40 40 0 0 0 98 905 A 40 40 0 0 1 58 935 L 40 935 A 40 40 0 0 1 0 895 L 0 40 A 40 40 0 0 1 40 0 Z');
   }
+}
+
+/* Definicje zmiennych domyślnych */
+:root {
+  --nav-top-default: 32px;
+  --nav-width-default: calc(80% - 100px);
+}
+
+/* Przykładowe media queries – dostosuj progi i wartości do swoich klas Tailwind */
+@media (max-width: 1536px) { /* max-2xl */
+  :root {
+    --nav-top-default: 32px;
+    --nav-width-default: calc(80% - 100px);
+  }
+}
+
+@media (max-width: 1280px) { /* max-xl */
+  :root {
+    --nav-width-default: calc(83% - 40px);
+  }
+}
+
+@media (max-width: 1024px) { /* max-lg */
+  :root {
+    --nav-width-default: calc(30% - 40px);
+  }
+}
+
+@media (max-width: 768px) { /* max-md */
+  :root {
+    --nav-width-default: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 640px) { /* max-sm */
+  :root {
+    --nav-width-default: calc(60% - 20px);
+  }
+}
+
+/* Animacja przewijania w dół – najpierw przesunięcie do top: 0, potem zmiana szerokości */
+@keyframes headerAnimation {
+  0% {
+    top: var(--nav-top-default);
+    width: var(--nav-width-default);
+  }
+  50% {
+    top: 0;
+    width: var(--nav-width-default);
+  }
+  100% {
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Animacja powrotu do stanu początkowego – kolejność odwrócona */
+@keyframes headerAnimationReverse {
+  0% {
+    top: 0;
+    width: 100%;
+  }
+  50% {
+    top: 0;
+    width: var(--nav-width-default);
+  }
+  100% {
+    top: var(--nav-top-default);
+    width: var(--nav-width-default);
+  }
+}
+
+.animate-header {
+  animation: headerAnimation 0.6s ease-out forwards;
+}
+
+.animate-header-reverse {
+  animation: headerAnimationReverse 0.6s ease-out forwards;
 }

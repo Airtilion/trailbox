@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <header className='w-full h-dvh relative'>
+    <header className='w-full h-dvh relative bg-white'>
       <Navbar />
 
       <section className='absolute z-0 w-[calc(100%-100px)] h-[calc(100%-100px)] top-[32px] left-[50%] translate-x-[-50%] max-xl:w-[calc(100%-40px)] max-sm:w-[calc(100%-20px)]'>
@@ -19,7 +19,7 @@ const Header = () => {
           </video>
         </div>
 
-        <div className='absolute top-[48px] flex gap-[16px] z-20 right-0 w-[calc(100%-80%)] justify-center max-2xl:top-[36px] max-xl:gap-[8px] max-xl:top-[32px] max-xl:w-[calc(100%-83%)] max-lg:hidden'>
+        <div className='fixed top-[48px] flex gap-[16px] z-20 right-0 w-[calc(100%-80%)] justify-center max-2xl:top-[36px] max-xl:gap-[8px] max-xl:top-[32px] max-xl:w-[calc(100%-83%)] max-lg:hidden'>
           <div className='absolute w-[32px] h-[1px] bg-white top-[50%] translate-x-[-50%] left-[52px] max-2xl:left-[26px] max-2xl:w-[16px] max-xl:hidden'></div>
           <Link to="#">
             <Icon icon="twemoji:flag-poland" width="36" height="36" className='hover:scale-105 duration-300 max-xl:w-[28px]' />
