@@ -7,7 +7,6 @@ import Configurator from '../../components/sandwich/configurator/Configurator'
 import gewebeDefault from '../../assets/images/sandwich/panels/gewebe/gewebe.webp'
 import fillings from '../../data/fillingsGewebe'
 import Description from '../../components/sandwich/configurator/Description'
-import RequestButton from '../../components/sandwich/configurator/RequestButton'
 
 const aboutPanel = {
   title: "Gewebe",
@@ -71,7 +70,7 @@ const Gewebe = () => {
 
             <div className='relative w-[415px] max-lg:w-full'>
 
-              <Type />
+              <Type title={aboutPanel.title} />
               <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} />
 
             </div>

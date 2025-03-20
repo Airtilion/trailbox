@@ -1,5 +1,5 @@
 import React from 'react'
-import BackTo from '../../components/sandwich/BackTo'
+import BackTo from '../../components/sandwich/configurator/BackTo'
 
 const HighImpact = () => {
   return (
