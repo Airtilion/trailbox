@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactForm = ({isVisible}) => {
     return (
-        <section className={`flex-1 relative z-10 px-[64px] py-[32px] max-xl:pb-[80px] max-md:px-[32px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
+        <section className={`flex-1 relative z-10 px-[64px] py-[32px] max-xl:pb-[80px] max-md:px-[32px] max-md:pb-[75px] max-xs:!pb-[78px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
             <h3 className='text-[25px] font-semibold relative z-10 max-md:text-[20px] max-md:mt-[12px]'>Wyślij zapytanie</h3>
             <p className='text-[16px] mb-[32px] relative z-10 max-md:text-[14px] max-md:mt-[8px]'>Napisz do nas, aby dowiedzieć sie więcej o naszych produktach</p>
 
