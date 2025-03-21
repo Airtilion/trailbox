@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({data}) => {
   return (
     <header className='w-full h-dvh relative bg-white'>
       <Navbar />
@@ -14,9 +14,16 @@ const Header = () => {
         <div className='h-full'>
           <div className='w-[80%] h-[128px] absolute z-10 bg-white top-0 left-0 rounded-br-[40px] r-corners max-2xl:h-[112px] max-xl:h-[96px] max-xl:w-[83%] max-xl:rounded-br-[30px] max-lg:w-[30%] max-md:w-[50%] max-sm:w-[60%]' />
           <div className='w-[270px] h-[75px] absolute z-20 bg-white bottom-0 right-0 rounded-tl-[40px] r-corners-b max-xl:rounded-tl-[30px] max-xl:w-[240px] max-md:hidden' />
-          <video className='cp object-cover brightness-30 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
-            <source src={videoBg} type="video/mp4" />
-          </video>
+          {data !== '' ?
+          <div className='cp  rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px] overflow-hidden'>
+              <img src={data.image} alt="Zdjęcie headeru" className='object-cover brightness-30 h-full w-full header-loading'/>
+          </div>
+           :
+            <video className='cp object-cover brightness-30 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
+              <source src={videoBg} type="video/mp4" />
+            </video>
+           }
+
         </div>
 
         <div className='fixed top-[48px] flex gap-[16px] z-20 right-0 w-[calc(100%-80%)] justify-center max-2xl:top-[36px] max-xl:gap-[8px] max-xl:top-[32px] max-xl:w-[calc(100%-83%)] max-lg:hidden'>
@@ -34,8 +41,8 @@ const Header = () => {
         </div>
 
         <div className='absolute top-[50%] left-[128px] max-xl:left-[64px] max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:w-[90%]'>
-          <h1 className='text-[70px] text-white font-extrabold z-20 max-xl:text-[55px] max-lg:text-[40px] max-sm:text-center max-sm:text-[30px] left-loading'>PŁYTY WARSTWOWE</h1>
-          <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px] left-loading delay-500'>dla wielu zastosowań</p>
+          <h1 className='text-[70px] text-white font-extrabold z-20 max-xl:text-[55px] max-lg:text-[40px] max-sm:text-center max-sm:text-[30px] left-loading'>{data !== '' ? data.title : 'PŁYTY WARSTWOWE'}</h1>
+          <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px] left-loading delay-500'>{data !== '' ? data.subtitle : 'dla wielu zastosowań'}</p>
         </div>
 
         <button className='w-[250px] h-[55px] rounded-full z-20 bg-[#898989] hover:bg-[#676767] duration-300 cursor-pointer absolute bottom-0 right-0 flex justify-center items-center gap-[8px] shadow-[0px_4px_20px_#00000040] max-xl:w-[220px] max-md:hidden'>
