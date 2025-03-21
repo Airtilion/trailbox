@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutOffer from '../components/containers/AboutOffer'
 
 const Containers = () => {
   return (
-    <div>Containers</div>
+    <>
+      <AboutOffer />
+    </>
   )
 }
 
