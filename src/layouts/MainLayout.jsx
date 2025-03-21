@@ -6,7 +6,7 @@ const MainLayout = () => {
     return (
         <>
             <Header />
-            <main className="flex flex-col relative">
+            <main className="flex flex-col relative overflow-hidden">
                 <Outlet />
             </main>
             <Footer />

@@ -10,11 +10,11 @@ const WhyUsTile = ({title, desc, img, index, isVisible}) => {
                 <p className='text-[16px] font-light text-white mt-[16px] max-md:text-[15px]'>{desc}</p>
             </div>
 
-            <img src={img[0]} alt="Pierwsza część zdjęcia tła sekcji" className='max-xl:hidden'/>
-            <img src={img[1]} alt="Pierwsza część zdjęcia tła sekcji" className='hidden max-xl:block max-lg:hidden'/>
-            <img src={img[2]} alt="Pierwsza część zdjęcia tła sekcji" className='hidden max-lg:block max-md:hidden'/>
-            <img src={img[3]} alt="Pierwsza część zdjęcia tła sekcji" className='hidden max-md:block max-xs:!hidden'/>
-            <img src={img[4]} alt="Pierwsza część zdjęcia tła sekcji" className='hidden max-xs:block'/>
+            <img src={img[0]} alt="Pierwsza część zdjęcia tła sekcji" loading='lazy' className='max-xl:hidden'/>
+            <img src={img[1]} alt="Pierwsza część zdjęcia tła sekcji" loading='lazy' className='hidden max-xl:block max-lg:hidden'/>
+            <img src={img[2]} alt="Pierwsza część zdjęcia tła sekcji" loading='lazy' className='hidden max-lg:block max-md:hidden'/>
+            <img src={img[3]} alt="Pierwsza część zdjęcia tła sekcji" loading='lazy' className='hidden max-md:block max-xs:!hidden'/>
+            <img src={img[4]} alt="Pierwsza część zdjęcia tła sekcji" loading='lazy' className='hidden max-xs:block'/>
         </div>
     )
 }

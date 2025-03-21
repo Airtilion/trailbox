@@ -16,6 +16,8 @@ const Navbar = () => {
     const menuRef = useRef(null);
     const mobileMenuRef = useRef(null);
     const [isScrolled, setIsScrolled] = useState(false);
+    // Flaga, która wskazuje czy użytkownik przewinął stronę przynajmniej raz
+    const [hasScrolled, setHasScrolled] = useState(false);
 
     const menuVisibilityHandle = () => {
         const mButton = menuRef.current;
@@ -46,6 +48,7 @@ const Navbar = () => {
         const handleScroll = () => {
             if (window.scrollY > 5) {
                 setIsScrolled(true);
+                setHasScrolled(true); // Ustawiamy flagę, że nastąpił scroll
             } else {
                 setIsScrolled(false);
             }
@@ -60,13 +63,18 @@ const Navbar = () => {
         };
     }, []);
 
+    // Przy formowaniu klas dodajemy animacje tylko, gdy użytkownik przewinął stronę (hasScrolled === true)
+    const navAnimationClass = hasScrolled 
+        ? (isScrolled ? 'animate-header' : 'animate-header-reverse')
+        : '';
+
     return (
         <>
             <div
                 ref={menuRef}
                 onClick={menuVisibilityHandle}
                 className='hidden max-lg:flex hamburger-menu duration-500 w-14 h-14 bg-white fixed flex-col justify-between items-center py-4 px-3 right-[48px] top-[64px] rounded-[10px] z-70 max-sm:right-[40px]'
-                style={{background: isScrolled && '#898989', top: isScrolled && '24px'}}
+                style={{ background: isScrolled && '#898989', top: isScrolled && '24px' }}
             >
                 <span className={`w-8 h-1 bg-[#898989] duration-500 rounded-full ${isScrolled && 'bg-white'}`}></span>
                 <span className={`w-8 h-1 bg-[#898989] duration-500 rounded-full ${isScrolled && 'bg-white'}`}></span>
@@ -74,21 +82,20 @@ const Navbar = () => {
             </div>
 
             <nav
-                className={`fixed z-60 transition-all duration-1500 rounded-br-[40px] bg-white ${
+                className={`fixed z-60 transition-all duration-1500 rounded-br-[40px] bg-white ${navAnimationClass} ${
                     isScrolled
-                        ? 'w-full shadow !px-[96px] top-0 h-[120px] animate-header !ml-0 max-sm:!justify-start max-sm:!px-[32px]'
-                        : 'w-[calc(80%-100px)] h-[128px] mx-[50px] pr-[32px] top-[32px] animate-header-reverse'
+                        ? 'w-full shadow !px-[96px] top-0 h-[120px] !ml-0 max-sm:!justify-start max-sm:!px-[32px]'
+                        : 'w-[calc(80%-100px)] h-[128px] mx-[50px] pr-[32px] top-[32px]'
                 } flex justify-between items-center max-2xl:pr-[24px] max-2xl:h-[112px] max-xl:mx-[20px] max-xl:w-[calc(83%-40px)] max-xl:h-[96px] max-lg:w-[calc(30%-40px)] max-lg:justify-center max-lg:pr-0 max-md:w-[calc(50%-40px)] max-sm:w-[calc(60%-20px)] max-sm:mx-[10px]`}
-                style={{borderEndEndRadius: isScrolled && '0'}}
+                style={{ borderEndEndRadius: isScrolled && '0' }}
             >
-
                 <Link to="/">
                     <img
                         src={logo}
                         alt="Logo trailbox"
                         width={200}
                         className='mt-[-30px] max-2xl:w-[150px] max-2xl:mt-[-20px] max-sm:w-[140px]'
-                        style={{marginTop: isScrolled && '0'}}
+                        style={{ marginTop: isScrolled && '0' }}
                     />
                 </Link>
 

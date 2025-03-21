@@ -15,7 +15,7 @@ const BusinessDesc = () => {
                 <div className='l-corners absolute top-0 right-0 bg-white w-[300px] h-[96px] flex justify-center items-center rounded-bl-[40px] z-20 max-md:w-[50%] max-sm:w-[75%]'>
                     <h2 className='text-[25px] font-semibold text-[#898989] max-md:text-[20px]'>Pasja i precyzja <br /> <span className='text-black'>w każdym detalu</span></h2>
                 </div>
-                <img src={sectionPhoto} alt="Zdjęcie pokryć paneli wartstowych"  className='rounded-[40px] relative z-10 h-full object-cover max-lg:rounded-[30px] max-sm:min-h-[350px]'/>
+                <img src={sectionPhoto} alt="Zdjęcie pokryć paneli wartstowych" lading="lazy" className='rounded-[40px] relative z-10 h-full object-cover max-lg:rounded-[30px] max-sm:min-h-[350px]'/>
                 <span className='dotted w-[170px] h-[170px] absolute bottom-[-30px] right-[-30px] z-0 max-md:w-[120px] max-md:h-[120px] max-sm:bottom-[-18px] max-sm:right-[-18px]'></span>
             </div>
 
