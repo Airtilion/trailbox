@@ -5,7 +5,7 @@ import cncSecond from '../../assets/images/cnc/cnc-2.webp'
 
 const AboutCnc = () => {
     return (
-        <section className='mt-[64px] mb-[64px]'>
+        <section className='mt-[64px]'>
             <article className='w-[1240px] mx-auto flex gap-[32px] max-xl:w-[1000px] max-xl:flex-col max-xl:items-center max-lg:w-[90%]'>
 
                 <div className='w-[817px] h-[483px] relative mix-blend-darken max-lg:w-full'>
