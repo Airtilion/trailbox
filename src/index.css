@@ -151,7 +151,7 @@
 
 /*Kontenery z sekcją o lekkim niebieskim */
 
-.custom-corners::after{
+.custom-corners::after {
   content: '';
   width: 80px;
   height: 80px;
@@ -163,7 +163,7 @@
   border-radius: 50%;
 }
 
-.custom-corners::before{
+.custom-corners::before {
   content: '';
   width: 80px;
   height: 80px;
@@ -175,7 +175,7 @@
   border-radius: 50%;
 }
 
-.custom-corners-b::after{
+.custom-corners-b::after {
   content: '';
   width: 80px;
   height: 80px;
@@ -187,7 +187,7 @@
   border-radius: 50%;
 }
 
-.custom-corners-b::before{
+.custom-corners-b::before {
   content: '';
   width: 80px;
   height: 80px;
@@ -244,32 +244,32 @@
     box-shadow: 30px -30px rgb(255, 255, 255);
   }
 
-  .custom-corners::after{
+  .custom-corners::after {
     width: 60px;
     height: 60px;
     bottom: -60px;
     box-shadow: 30px -30px rgb(243, 247, 248);
   }
-  
-  .custom-corners::before{
+
+  .custom-corners::before {
     width: 60px;
     height: 60px;
     left: -60px;
     box-shadow: 30px -30px rgb(243, 247, 248);
   }
-  
-  .custom-corners-b::after{
+
+  .custom-corners-b::after {
     width: 60px;
     height: 60px;
     top: -60px;
     box-shadow: -30px 30px rgb(243, 247, 248);
   }
-  
-  .custom-corners-b::before{
+
+  .custom-corners-b::before {
     width: 60px;
     height: 60px;
     right: -60px;
-    box-shadow: -30px 30px rgb(243, 247, 248);
+    box-shadow: -30px 30px #ffffff;
   }
 }
 
@@ -358,13 +358,22 @@
 }
 
 /* ---------- kafelki panele sandwich ---------- */
-.dropShadow-custom {filter: drop-shadow(0 4px 10px #00000040);}
+.dropShadow-custom {
+  filter: drop-shadow(0 4px 10px #00000040);
+}
 
-.clip-custom {clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');}
-.custom-width {width: 370px;}
+.clip-custom {
+  clip-path: path('M 20 0 L 350 0 A 20 20 0 0 1 370 20 L 370 245 A 20 20 0 0 1 350 265 L 226 265 A 20 20 0 0 0 206 285 L 206 300 A 20 20 0 0 1 186 320 L 20 320 A 20 20 0 0 1 0 300 L 0 20 A 20 20 0 0 1 20 0 Z');
+}
+
+.custom-width {
+  width: 370px;
+}
 
 @media only screen and (max-width: 450px) {
-  .clip-custom {clip-path: path('M 13 0 L 226 0 A 17 17 0 0 1 290 17 L 290 207 A 17 17 0 0 1 270 224 L 146 224 A 17 17 0 0 0 133 240 L 133 253 A 17 17 0 0 1 120 270 L 13 270 A 17 17 0 0 1 0 253 L 0 17 A 17 17 0 0 1 13 0 Z');}
+  .clip-custom {
+    clip-path: path('M 13 0 L 226 0 A 17 17 0 0 1 290 17 L 290 207 A 17 17 0 0 1 270 224 L 146 224 A 17 17 0 0 0 133 240 L 133 253 A 17 17 0 0 1 120 270 L 13 270 A 17 17 0 0 1 0 253 L 0 17 A 17 17 0 0 1 13 0 Z');
+  }
 }
 
 /* --- kafleki oferta --- */
@@ -376,50 +385,51 @@
 
 /* --- wcięcia kontakt --- */
 
-.clip-contact{
+.clip-contact {
   clip-path: path('M 40 0 L 784 0 A 40 40 0 0 1 824 40 L 824 486 A 40 40 0 0 1 784 526 L 672 526 A 40 40 0 0 0 632 566 A 40 40 0 0 1 592 601 L 40 601 A 40 40 0 0 1 0 561 L 0 40 A 40 40 0 0 1 40 0 Z');
 }
 
 
-@media only screen and (max-width: 1535px){
-  .clip-offer{
+@media only screen and (max-width: 1535px) {
+  .clip-offer {
     clip-path: path("M 40 0 L 152 0 A 40 40 0 0 1 192 40 L 192 80 A 40 40 0 0 0 232 120 L 272 120 A 40 40 0 0 1 312 160 L 312 460 A 40 40 0 0 1 312 500 L 40 500 A 40 40 0 0 1 0 460 L 0 40 A 40 40 0 0 1 40 0 Z")
   }
 }
 
-@media only screen and (max-width: 1279px){
-  .clip-contact{
+@media only screen and (max-width: 1279px) {
+  .clip-contact {
     clip-path: path('M 40 0 L 588 0 A 40 40 0 0 1 628 40 L 628 642 A 40 40 0 0 1 588 682 L 476 682 A 40 40 0 0 0 436 717 A 40 40 0 0 1 396 757 L 30 757 A 40 40 0 0 1 0 706 L 0 50 A 40 40 0 0 1 30 0 Z');
   }
 }
 
-@media only screen and (max-width: 1024px){
-  .clip-offer{
+@media only screen and (max-width: 1024px) {
+  .clip-offer {
     clip-path: path("M 40 0 L 440 0 A 40 40 0 0 1 480 40 L 480 80 A 40 40 0 0 0 520 120 L 560 120 A 40 40 0 0 1 600 160 L 600 460 A 40 40 0 0 1 312 500 L 40 500 A 40 40 0 0 1 0 460 L 0 40 A 40 40 0 0 1 40 0 Z")
   }
-  .clip-contact{
+
+  .clip-contact {
     clip-path: path('M 40 0 L 660 0 A 40 40 0 0 1 700 40 L 700 618 A 40 40 0 0 1 660 658 L 548 658 A 40 40 0 0 0 508 698 A 40 40 0 0 1 468 733 L 40 733 A 40 40 0 0 1 0 693 L 0 40 A 40 40 0 0 1 40 0 Z');
   }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   .clip-offer {
     clip-path: path("M 40 0 L 232 0 A 40 40 0 0 1 272 40 L 272 80 A 40 40 0 0 0 312 120 L 352 120 A 40 40 0 0 1 392 160 L 392 460 A 40 40 0 0 1 352 500 L 40 500 A 40 40 0 0 1 0 460 L 0 40 A 40 40 0 0 1 40 0 Z")
   }
 
-  .clip-contact{
+  .clip-contact {
     clip-path: path('M 40 0 L 360 0 A 40 40 0 0 1 400 40 L 400 712 A 40 40 0 0 1 360 752 L 248 752 A 40 40 0 0 0 208 792 A 40 40 0 0 1 168 827 L 40 827 A 40 40 0 0 1 0 787 L 0 40 A 40 40 0 0 1 40 0 Z');
   }
 }
 
-@media only screen and (max-width: 639px){
+@media only screen and (max-width: 639px) {
   .clip-offer {
     clip-path: path("M 40 0 L 130 0 A 40 40 0 0 1 170 40 L 170 80 A 40 40 0 0 0 210 120 L 250 120 A 40 40 0 0 1 290 160 L 390 460 A 40 40 0 0 1 290 500 L 40 500 A 40 40 0 0 1 0 460 L 0 40 A 40 40 0 0 1 40 0 Z")
   }
 }
 
-@media only screen and (max-width: 450px){
-  .clip-contact{
+@media only screen and (max-width: 450px) {
+  .clip-contact {
     clip-path: path('M 40 0 L 250 0 A 40 40 0 0 1 290 40 L 290 835 A 40 40 0 0 1 250 875 L 138 875 A 40 40 0 0 0 98 905 A 40 40 0 0 1 58 935 L 40 935 A 40 40 0 0 1 0 895 L 0 40 A 40 40 0 0 1 40 0 Z');
   }
 }
@@ -432,32 +442,42 @@
 
 /* Przykładowe media queries – dostosuj progi i wartości do swoich klas Tailwind */
 
-@media (max-width: 1536px) { /* max-2xl */
+@media (max-width: 1536px) {
+
+  /* max-2xl */
   :root {
     --nav-top-default: 32px;
     --nav-width-default: calc(80% - 100px);
   }
 }
 
-@media (max-width: 1280px) { /* max-xl */
+@media (max-width: 1280px) {
+
+  /* max-xl */
   :root {
     --nav-width-default: calc(83% - 40px);
   }
 }
 
-@media (max-width: 1024px) { /* max-lg */
+@media (max-width: 1024px) {
+
+  /* max-lg */
   :root {
     --nav-width-default: calc(30% - 40px);
   }
 }
 
-@media (max-width: 768px) { /* max-md */
+@media (max-width: 768px) {
+
+  /* max-md */
   :root {
     --nav-width-default: calc(50% - 40px);
   }
 }
 
-@media (max-width: 640px) { /* max-sm */
+@media (max-width: 640px) {
+
+  /* max-sm */
   :root {
     --nav-width-default: calc(60% - 20px);
   }
@@ -469,10 +489,12 @@
     top: var(--nav-top-default);
     width: var(--nav-width-default);
   }
+
   50% {
     top: 0;
     width: var(--nav-width-default);
   }
+
   100% {
     top: 0;
     width: 100%;
@@ -485,10 +507,12 @@
     top: 0;
     width: 100%;
   }
+
   50% {
     top: 0;
     width: var(--nav-width-default);
   }
+
   100% {
     top: var(--nav-top-default);
     width: var(--nav-width-default);
@@ -535,30 +559,32 @@
   transform: translateY(-50px);
 }
 
-.left-loading{
+.left-loading {
   animation: leftLoading 1s ease-in-out;
 }
 
 @keyframes leftLoading {
-  from{
+  from {
     transform: translate(-50px);
   }
-  to{
+
+  to {
     transform: translateX(0);
   }
 }
 
 /* header */
 
-.header-loading{
+.header-loading {
   animation: headerLoading 2s ease-in-out;
 }
 
 @keyframes headerLoading {
-  from{
+  from {
     transform: scale(1.1);
   }
-  to{
+
+  to {
     transform: scale(1);
   }
 }
@@ -568,12 +594,15 @@
   width: 50px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: 
-    radial-gradient(farthest-side,#898989 94%,#0000) top/8px 8px no-repeat,
-    conic-gradient(#0000 30%,#898989);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  background:
+    radial-gradient(farthest-side, #898989 94%, #0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #898989);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
   animation: l13 1s infinite linear;
 }
-@keyframes l13{ 
-  100%{transform: rotate(1turn)}
+
+@keyframes l13 {
+  100% {
+    transform: rotate(1turn)
+  }
 }
