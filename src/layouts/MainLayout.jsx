@@ -6,6 +6,7 @@ import plyty_header from '../assets/images/headers/header-plyty.webp'
 import plyty_cnc from '../assets/images/headers/header-cnc.webp'
 import plyty_realizacje from '../assets/images/headers/header-realizacje.webp'
 import plyty_zestawy from '../assets/images/headers/header-zestawy.webp'
+import ScrollToSection from "../components/ScrollToSection";
 
 const headers = [
     {
@@ -41,6 +42,7 @@ const MainLayout = () => {
                 <Outlet />
             </main>
             <Footer />
+            <ScrollToSection />
         </>
     );
 };
