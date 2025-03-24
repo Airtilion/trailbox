@@ -11,7 +11,7 @@ const AfterContact = () => {
 
         <article className='flex flex-col items-center'>
           <h2 className='text-[25px] font-semibold max-sm:text-[20px]'>DZIAŁ HANDLOWY</h2>
-          <p>Tel. +48 882 143 803</p>
+          <p>Tel. +48 882 143 803</p>
           <p>w.rasche@trailbox.pl</p>
         </article>
       </section>

@@ -42,7 +42,7 @@ const Footer = () => {
         <div className='flex flex-col gap-[16px] max-lg:text-center'>
           <h2 className='text-white text-[16px]'>Firma</h2>
           <div className='flex flex-col gap-[8px] text-white'>
-            <Link to="/#about" className='font-extralight hover:text-[#DCDCDC] duration-500'>O nas</Link>
+            <Link to="/#o-nas" className='font-extralight hover:text-[#DCDCDC] duration-500'>O nas</Link>
             <Link to="/realizacje" className='font-extralight hover:text-[#DCDCDC] duration-500'>Realizacje</Link>
           </div>
         </div>

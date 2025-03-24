@@ -4,7 +4,7 @@ import logo from '../assets/images/logo.svg'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
 const elements = [
-    { name: 'O nas', link: '/#onas' },
+    { name: 'O nas', link: '/#o-nas' },
     { name: 'Płyty sandwich', link: '/plyty-sandwich' },
     { name: 'Zestawy kontenerowe', link: '/zestawy' },
     { name: 'Usługa CNC', link: '/cnc' },
