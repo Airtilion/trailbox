@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
 
-const Header = ({data}) => {
+const Header = ({ data }) => {
   return (
     <header className='w-full h-dvh relative bg-white'>
       <Navbar />
@@ -15,14 +15,14 @@ const Header = ({data}) => {
           <div className='w-[80%] h-[128px] absolute z-10 bg-white top-0 left-0 rounded-br-[40px] r-corners max-2xl:h-[112px] max-xl:h-[96px] max-xl:w-[83%] max-xl:rounded-br-[30px] max-lg:w-[30%] max-md:w-[50%] max-sm:w-[60%]' />
           <div className='w-[270px] h-[75px] absolute z-20 bg-white bottom-0 right-0 rounded-tl-[40px] r-corners-b max-xl:rounded-tl-[30px] max-xl:w-[240px] max-md:hidden' />
           {data !== '' ?
-          <div className='cp  rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px] overflow-hidden'>
-              <img src={data.image} alt="Zdjęcie headeru" className='object-cover brightness-30 h-full w-full header-loading'/>
-          </div>
-           :
+            <div className='cp  rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px] overflow-hidden'>
+              <img src={data.image} alt="Zdjęcie headeru" className='object-cover brightness-30 h-full w-full header-loading' />
+            </div>
+            :
             <video className='cp object-cover brightness-50 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
               <source src={videoBg} type="video/mp4" />
             </video>
-           }
+          }
 
         </div>
 
@@ -45,10 +45,12 @@ const Header = ({data}) => {
           <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px] left-loading delay-500'>{data !== '' ? data.subtitle : 'dla wielu zastosowań'}</p>
         </div>
 
-        <button className='w-[250px] h-[55px] rounded-full z-20 bg-[#898989] hover:bg-[#676767] duration-300 cursor-pointer absolute bottom-0 right-0 flex justify-center items-center gap-[8px] shadow-[0px_4px_20px_#00000040] max-xl:w-[220px] max-md:hidden'>
-          <Icon icon="solar:letter-bold" width="26" height="26" className="text-white max-xl:w-[24px]" />
-          <p className='text-white text-[20px] max-xl:text-[16px]'>Napisz do nas</p>
-        </button>
+        <Link to="/#kontakt">
+          <button className='w-[250px] h-[55px] rounded-full z-20 bg-[#898989] cursor-pointer absolute bottom-0 right-0 flex justify-center items-center gap-[8px] shadow-[0px_4px_20px_#00000040] overflow-hidden custom-button max-xl:w-[220px] max-md:hidden'>
+            <Icon icon="solar:letter-bold" width="26" height="26" className="relative z-10 text-white max-xl:w-[24px]" />
+            <p className='text-white text-[20px] relative z-10 max-xl:text-[16px]'>Napisz do nas</p>
+          </button>
+        </Link>
 
         <div className='absolute bottom-[16px] left-[50%] translate-x-[-50%] flex flex-col items-center gap-[8px]'>
           <div className='w-[25px] h-[50px] border-2 border-white rounded-full flex justify-center items-center relative bounce-lines'>

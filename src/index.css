@@ -629,3 +629,19 @@ dialog::backdrop {
   background-color: #151515b3 !important;
   z-index: 20;
 }
+
+/* ---------- button hover effect ---------- */
+.custom-button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #676767;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease-in-out;
+}
+
+.custom-button:hover::before{transform: scaleX(1)}
