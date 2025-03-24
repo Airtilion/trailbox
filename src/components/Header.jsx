@@ -1,5 +1,5 @@
 import React from 'react'
-import videoBg from '../assets/video/test.mp4'
+import videoBg from '../assets/video/Trailbox-25fps.mp4'
 import Navbar from './Navbar'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
@@ -19,7 +19,7 @@ const Header = ({data}) => {
               <img src={data.image} alt="Zdjęcie headeru" className='object-cover brightness-30 h-full w-full header-loading'/>
           </div>
            :
-            <video className='cp object-cover brightness-30 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
+            <video className='cp object-cover brightness-50 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
               <source src={videoBg} type="video/mp4" />
             </video>
            }
