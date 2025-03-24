@@ -119,9 +119,9 @@ const Navbar = () => {
                                 style={{ animationDelay: `${index * 100}ms` }}
                                 onClick={menuVisibilityHandle}
                             >
-                                <a href={item.link} className='text-[18px] xl:text-[17px] text-white'>
+                                <Link to={item.link} className='text-[18px] xl:text-[17px] text-white'>
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
