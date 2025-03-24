@@ -8,7 +8,10 @@ const ScrollToSection = () => {
         if (location.hash) {
             const element = document.getElementById(location.hash.replace("#", ""));
             if (element) {
-                element.scrollIntoView({ behavior: "smooth", block: "end" });
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            else{
+                window.scrollTo(0,0)
             }
         }
     }, [location]);

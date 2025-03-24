@@ -3,7 +3,7 @@ import cncFourth from '../../assets/images/cnc/cnc-4.webp'
 
 const Precision = () => {
     return (
-        <section className='mt-[256px] bg-[#F3F7F8] py-[100px]'>
+        <section className='mt-[256px] bg-[#F3F7F8] py-[100px] mb-[64px]'>
             <article className='w-[1240px] mx-auto flex gap-[64px] max-xl:w-[1000px] max-lg:w-[90%] max-lg:flex-col max-lg:items-center'>
                 
                 <div className='w-[660px] relative max-xl:w-[500px] max-lg:flex max-lg:justify-center max-sm:w-full'>
