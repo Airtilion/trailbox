@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ImageSection from '../../components/sandwich/configurator/ImageSection'
 import BackTo from '../../components/sandwich/configurator/BackTo'
 import Type from '../../components/sandwich/configurator/Type'
@@ -7,6 +7,7 @@ import Configurator from '../../components/sandwich/configurator/Configurator'
 import gewebeDefault from '../../assets/images/sandwich/panels/gewebe/gewebe.webp'
 import fillings from '../../data/fillingsGewebe'
 import Description from '../../components/sandwich/configurator/Description'
+import Dialog from '../../components/sandwich/configurator/Dialog'
 
 const aboutPanel = {
   title: "Gewebe",
@@ -43,6 +44,8 @@ const aboutPanel = {
 const Gewebe = () => {
   const [selectedFilling, setSelectedFilling] = useState(null);
   const [selectedCore, setSelectedCore] = useState(null);
+  const dialogRef = useRef();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const selectedFillingObject = fillings.find(filling => filling.title === selectedFilling);
 
@@ -55,6 +58,33 @@ const Gewebe = () => {
   useEffect(() => {
     setSelectedCore(null);
   }, [selectedFilling]);
+
+  const openDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(true);
+      dialogRef.current.showModal();
+    }
+  }
+
+  const closeDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(false);
+      dialogRef.current.close();
+    }
+  }
+
+  useEffect(() => {
+    if (isDialogOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+
+  }, [isDialogOpen])
 
   return (
     <>
@@ -71,7 +101,7 @@ const Gewebe = () => {
             <div className='relative w-[415px] max-lg:w-full'>
 
               <Type title={aboutPanel.title} />
-              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} />
+              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} />
 
             </div>
 
@@ -85,6 +115,8 @@ const Gewebe = () => {
           <Description aboutPanel={aboutPanel} />
         </div>
       </section>
+
+      <Dialog isDialogOpen={isDialogOpen} dialogRef={dialogRef} selectedCore={selectedCore} selectedFilling={selectedFilling} closeDialog={closeDialog} type={aboutPanel.title} />
     </>
   )
 }

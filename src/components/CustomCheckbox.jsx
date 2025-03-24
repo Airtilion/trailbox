@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CustomCheckbox = ({checkboxRef}) => {
+const CustomCheckbox = ({checkboxRef, isDialogOpen = false}) => {
     return (
-        <div className='w-[500px] flex gap-[8px] items-start max-lg:w-full max-lg:mb-[14px]'>
+        <div className={`flex gap-[8px] items-start max-lg:w-full max-lg:mb-[14px] ${isDialogOpen === true ? 'w-full' : 'w-[500px]'}`}>
             <input ref={checkboxRef} type="checkbox" id="rulebook" required className='peer opacity-0 absolute h-0 w-0' />
             <label htmlFor="rulebook" className="w-5 h-5 border-2 border-[#898989] flex items-center justify-center cursor-pointer peer-checked:bg-[#898989] peer-checked:border-[#898989] transition-all duration-200">
                 <span className="hidden peer-checked:block text-white">✓</span>

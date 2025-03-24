@@ -622,3 +622,10 @@
     transform: rotate(1turn)
   }
 }
+
+/* ---------- dialog w ofercie ---------- */
+
+dialog::backdrop {
+  background-color: #151515b3 !important;
+  z-index: 20;
+}
