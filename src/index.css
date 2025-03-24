@@ -199,6 +199,29 @@
   border-radius: 50%;
 }
 
+.custom-corners-non::after {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0px;
+  left: -80px;
+  box-shadow: 40px 40px rgb(243, 247, 248);
+  border-radius: 50%;
+}
+
+.custom-corners-non::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+
+  box-shadow: -40px 40px rgb(243, 247, 248);
+  border-radius: 50%;
+}
+
 @media only screen and (max-width: 1279px) {
   .r-corners::before {
     width: 60px;
@@ -270,6 +293,20 @@
     height: 60px;
     right: -60px;
     box-shadow: -30px 30px #ffffff;
+  }
+
+  .custom-corners-non::after {
+    width: 40px;
+    height: 40px;
+    left: -40px;
+    box-shadow: 20px 20px rgb(243, 247, 248);
+  }
+
+  .custom-corners-non::before {
+    width: 40px;
+    height: 40px;
+    right: -40px;
+    box-shadow: -20px 20px rgb(243, 247, 248);
   }
 }
 
@@ -631,7 +668,7 @@ dialog::backdrop {
 }
 
 /* ---------- button hover effect ---------- */
-.custom-button::before{
+.custom-button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -644,4 +681,6 @@ dialog::backdrop {
   transition: transform 1s ease-in-out;
 }
 
-.custom-button:hover::before{transform: scaleX(1)}
+.custom-button:hover::before {
+  transform: scaleX(1)
+}

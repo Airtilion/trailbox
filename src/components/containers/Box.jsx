@@ -5,7 +5,7 @@ const Box = ({ element, index }) => {
         <div className={`mt-[48px] ${index % 2 !== 0 ? 'bg-[#F3F7F8] py-[48px]' : 'bg-white'}`}>
             <article className='w-[1240px] mx-auto max-xl:w-[1000px] max-lg:w-[750px] max-md:w-[600px] max-sm:w-[90%]'>
                 <div className={`h-[400px] relative max-lg:h-[625px] ${index !== 0 ? 'max-md:h-[700px] max-xs:!h-[1000px]' : 'max-sm:h-[750px]'}`}>
-                    <img src={element.image} alt="Zdjęcie tła" loading="lazy" className='object-cover w-full h-full absolute top-0 left-0 rounded-[40px]' />
+                    <img src={element.image} alt="Zdjęcie tła" loading="lazy" className='object-cover object-top w-full h-full absolute top-0 left-0 rounded-[40px]' />
                     <div className={`z-[1] absolute top-0 left-0 h-full w-full rounded-[40px] ${index % 2 !== 0 ? 'bg-[#898989]/90' : 'bg-[#353432]/90'}`} />
 
                     <div className={`flex items-center justify-center w-[330px] h-[100px] absolute z-10 top-0 max-sm:w-[200px]  ${index % 2 !== 0 ? 'bg-[#F3F7F8] right-0 rounded-bl-[40px] custom-corners' : 'bg-white r-corners left-0 rounded-br-[40px]'} `}>
