@@ -8,7 +8,7 @@ const ScrollToSection = () => {
         if (location.hash) {
             const element = document.getElementById(location.hash.replace("#", ""));
             if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
+                element.scrollIntoView({ behavior: "smooth", block: "end" });
             }
         }
     }, [location]);
