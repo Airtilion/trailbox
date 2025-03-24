@@ -4,7 +4,7 @@ import Offer from '../components/home/Offer'
 import WhyUs from '../components/home/WhyUs'
 import Contact from '../components/home/Contact'
 
-import test from '../assets/images/background.webp'
+import test from '../assets/images/background-2.webp'
 import AfterContact from '../components/home/AfterContact'
 
 const Home = () => {
