@@ -101,7 +101,7 @@ const Navbar = () => {
 
                 <ul className='flex gap-[48px] max-2xl:gap-[28px] max-xl:gap-[24px] max-lg:hidden'>
                     {elements.map((element, index) => (
-                        <li key={index} className='text-[16px] max-2xl:text-[15px] max-xl:text-[14px]'>
+                        <li key={index} className='text-[16px] duration-700 hover:translate-y-[-10px] max-2xl:text-[15px] max-xl:text-[14px]'>
                             <Link to={element.link}>{element.name}</Link>
                         </li>
                     ))}
