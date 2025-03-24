@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ImageSection from '../../components/sandwich/configurator/ImageSection'
 import BackTo from '../../components/sandwich/configurator/BackTo'
 import Type from '../../components/sandwich/configurator/Type'
@@ -7,6 +7,8 @@ import Configurator from '../../components/sandwich/configurator/Configurator'
 import waterRainDefault from '../../assets/images/sandwich/panels/water-rain/water-rain.webp'
 import fillings from '../../data/fillingsWaterRain'
 import Description from '../../components/sandwich/configurator/Description'
+import Dialog from '../../components/sandwich/configurator/Dialog'
+import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "Water Rain Drop Effect",
@@ -43,18 +45,47 @@ const aboutPanel = {
 const WaterRain = () => {
   const [selectedFilling, setSelectedFilling] = useState(null);
   const [selectedCore, setSelectedCore] = useState(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const dialogRef = useRef();
 
   const selectedFillingObject = fillings.find(filling => filling.title === selectedFilling);
 
   const selectedImage = selectedFillingObject
     ? selectedCore
-      ? selectedFillingObject.cores.find(core => core.thickness === selectedCore)?.imgFull || waterRainDefault 
-      : selectedFillingObject.imgFull || waterRainDefault 
-    : waterRainDefault ;
+      ? selectedFillingObject.cores.find(core => core.thickness === selectedCore)?.imgFull || waterRainDefault
+      : selectedFillingObject.imgFull || waterRainDefault
+    : waterRainDefault;
 
   useEffect(() => {
     setSelectedCore(null);
   }, [selectedFilling]);
+
+  const openDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(true);
+      dialogRef.current.showModal();
+    }
+  }
+
+  const closeDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(false);
+      dialogRef.current.close();
+    }
+  }
+
+  useEffect(() => {
+    if (isDialogOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+
+  }, [isDialogOpen])
 
   return (
     <>
@@ -71,7 +102,7 @@ const WaterRain = () => {
             <div className='relative w-[415px] max-lg:w-full'>
 
               <Type title={aboutPanel.title} />
-              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} />
+              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} />
 
             </div>
 
@@ -80,11 +111,15 @@ const WaterRain = () => {
         </div>
       </section>
 
-      <section className='mt-[32px] py-[64px] bg-[#F3F7F8]'>
+      <section className='mt-[32px] py-[80px] bg-[#F3F7F8]'>
         <div className='w-[1130px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]'>
           <Description aboutPanel={aboutPanel} />
         </div>
       </section>
+
+      <CallToAction />
+
+      <Dialog isDialogOpen={isDialogOpen} dialogRef={dialogRef} selectedCore={selectedCore} selectedFilling={selectedFilling} closeDialog={closeDialog} type={aboutPanel.title} />
     </>
   )
 }

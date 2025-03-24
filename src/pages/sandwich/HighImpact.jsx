@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import ImageSection from '../../components/sandwich/configurator/ImageSection'
 import BackTo from '../../components/sandwich/configurator/BackTo'
 import Type from '../../components/sandwich/configurator/Type'
@@ -7,6 +7,8 @@ import Configurator from '../../components/sandwich/configurator/Configurator'
 import highGlossDefault from '../../assets/images/sandwich/panels/high-impact/high-impact.webp'
 import fillings from '../../data/fillingsHighImpact'
 import Description from '../../components/sandwich/configurator/Description'
+import Dialog from '../../components/sandwich/configurator/Dialog'
+import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "High Impact",
@@ -43,6 +45,8 @@ const aboutPanel = {
 const HighImpact = () => {
   const [selectedFilling, setSelectedFilling] = useState(null);
   const [selectedCore, setSelectedCore] = useState(null);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const dialogRef = useRef();
 
   const selectedFillingObject = fillings.find(filling => filling.title === selectedFilling);
 
@@ -55,6 +59,33 @@ const HighImpact = () => {
   useEffect(() => {
     setSelectedCore(null);
   }, [selectedFilling]);
+
+  const openDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(true);
+      dialogRef.current.showModal();
+    }
+  }
+
+  const closeDialog = () => {
+    if (dialogRef.current) {
+      setIsDialogOpen(false);
+      dialogRef.current.close();
+    }
+  }
+
+  useEffect(() => {
+    if (isDialogOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+
+  }, [isDialogOpen])
 
   return (
     <>
@@ -71,7 +102,7 @@ const HighImpact = () => {
             <div className='relative w-[415px] max-lg:w-full'>
 
               <Type title={aboutPanel.title} />
-              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} />
+              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} />
 
             </div>
 
@@ -85,6 +116,10 @@ const HighImpact = () => {
           <Description aboutPanel={aboutPanel} />
         </div>
       </section>
+
+      <CallToAction />
+
+      <Dialog isDialogOpen={isDialogOpen} dialogRef={dialogRef} selectedCore={selectedCore} selectedFilling={selectedFilling} closeDialog={closeDialog} type={aboutPanel.title} />
     </>
   )
 }

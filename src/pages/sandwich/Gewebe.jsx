@@ -8,6 +8,7 @@ import gewebeDefault from '../../assets/images/sandwich/panels/gewebe/gewebe.web
 import fillings from '../../data/fillingsGewebe'
 import Description from '../../components/sandwich/configurator/Description'
 import Dialog from '../../components/sandwich/configurator/Dialog'
+import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "Gewebe",
@@ -44,8 +45,8 @@ const aboutPanel = {
 const Gewebe = () => {
   const [selectedFilling, setSelectedFilling] = useState(null);
   const [selectedCore, setSelectedCore] = useState(null);
-  const dialogRef = useRef();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const dialogRef = useRef();
 
   const selectedFillingObject = fillings.find(filling => filling.title === selectedFilling);
 
@@ -115,6 +116,8 @@ const Gewebe = () => {
           <Description aboutPanel={aboutPanel} />
         </div>
       </section>
+
+      <CallToAction />
 
       <Dialog isDialogOpen={isDialogOpen} dialogRef={dialogRef} selectedCore={selectedCore} selectedFilling={selectedFilling} closeDialog={closeDialog} type={aboutPanel.title} />
     </>
