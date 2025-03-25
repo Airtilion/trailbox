@@ -22,12 +22,12 @@ const Navbar = () => {
     const menuVisibilityHandle = () => {
         const mButton = menuRef.current;
         const mMenu = mobileMenuRef.current;
-        if(mButton.classList.contains("active")){
+        if (mButton.classList.contains("active")) {
             mButton.classList.remove("active");
         } else {
             mButton.classList.add("active");
         }
-        if(mMenu.classList.contains("flex")){
+        if (mMenu.classList.contains("flex")) {
             mMenu.classList.remove("flex");
             mMenu.classList.add("hidden");
         } else {
@@ -64,7 +64,7 @@ const Navbar = () => {
     }, []);
 
     // Przy formowaniu klas dodajemy animacje tylko, gdy użytkownik przewinął stronę (hasScrolled === true)
-    const navAnimationClass = hasScrolled 
+    const navAnimationClass = hasScrolled
         ? (isScrolled ? 'animate-header' : 'animate-header-reverse')
         : '';
 
@@ -82,11 +82,10 @@ const Navbar = () => {
             </div>
 
             <nav
-                className={`fixed z-60 transition-all duration-1500 rounded-br-[40px] bg-white ${navAnimationClass} ${
-                    isScrolled
+                className={`fixed z-60 transition-all duration-1500 rounded-br-[40px] bg-white ${navAnimationClass} ${isScrolled
                         ? 'w-full shadow !px-[96px] top-0 h-[120px] !ml-0 max-sm:!justify-start max-sm:!px-[32px]'
                         : 'w-[calc(80%-100px)] h-[128px] mx-[50px] pr-[32px] top-[32px]'
-                } flex justify-between items-center max-2xl:pr-[24px] max-2xl:h-[112px] max-xl:mx-[20px] max-xl:w-[calc(83%-40px)] max-xl:h-[96px] max-lg:w-[calc(30%-40px)] max-lg:justify-center max-lg:pr-0 max-md:w-[calc(50%-40px)] max-sm:w-[calc(60%-20px)] max-sm:mx-[10px]`}
+                    } flex justify-between items-center max-2xl:pr-[24px] max-2xl:h-[112px] max-xl:mx-[20px] max-xl:w-[calc(83%-40px)] max-xl:h-[96px] max-lg:w-[calc(30%-40px)] max-lg:justify-center max-lg:pr-0 max-md:w-[calc(50%-40px)] max-sm:w-[calc(60%-20px)] max-sm:mx-[10px]`}
                 style={{ borderEndEndRadius: isScrolled && '0' }}
             >
                 <Link to="/">
@@ -153,15 +152,17 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <button className='w-[250px] h-[50px] rounded-full z-20 bg-[#898989] hover:bg-[#676767] duration-300 cursor-pointer flex justify-center items-center gap-[8px]' style={{ animationDelay: `${800}ms` }}>
-                        <Icon
-                            icon="solar:letter-bold"
-                            width="26"
-                            height="26"
-                            className="text-white max-xl:w-[24px]"
-                        />
-                        <p className='text-white text-[20px] max-xl:text-[16px]'>Napisz do nas</p>
-                    </button>
+                    <Link to="/#kontakt">
+                        <button className='w-[250px] h-[50px] rounded-full z-20 bg-[#898989] hover:bg-[#676767] duration-300 cursor-pointer flex justify-center items-center gap-[8px]' style={{ animationDelay: `${800}ms` }}>
+                            <Icon
+                                icon="solar:letter-bold"
+                                width="26"
+                                height="26"
+                                className="text-white max-xl:w-[24px]"
+                            />
+                            <p className='text-white text-[20px] max-xl:text-[16px]'>Napisz do nas</p>
+                        </button>
+                    </Link>
                 </div>
             </nav>
         </>
