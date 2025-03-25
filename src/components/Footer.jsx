@@ -1,5 +1,5 @@
 import React from 'react'
-import footerBg from '../assets/images/footerBg.webp'
+import footerBg from '../assets/images/footer-bg.webp'
 import logo from '../assets/images/logo-white.svg'
 import { Link } from 'react-router-dom'
 
@@ -61,7 +61,7 @@ const Footer = () => {
         </Link>
       </article>
 
-      <img src={footerBg} alt="Zdjęcie maszyny CNC w stopce strony" loading='lazy' className='absolute w-full h-full object-cover top-0 left-0' />
+      <img src={footerBg} alt="Zdjęcie maszyny CNC w stopce strony" loading='lazy' className='absolute w-full h-full object-cover top-0 left-0 object-top' />
     </footer>
   )
 }

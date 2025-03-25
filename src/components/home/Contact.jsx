@@ -48,7 +48,7 @@ const Contact = () => {
 
                 <ContactForm isVisible={isVisible}/>
             </article>
-            <img src={contactBg} alt="" className='absolute w-full h-full top-0 left-0 object-cover z-0' />
+            <img src={contactBg} alt="" className='absolute w-full h-full top-0 left-0 object-cover z-0 scale-[1.1]' />
         </section>
     )
 }
