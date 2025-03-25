@@ -37,7 +37,7 @@ const MainLayout = () => {
 
     return (
         <>
-            <Header data={path === '/plyty-sandwich' ? headers[0] : path === '/cnc' ? headers[2] : path === '/realizacje' ? headers[3] : path === '/zestawy' ? headers[1] : ''}/>
+            <Header data={path.startsWith('/plyty-sandwich') ? headers[0] : path === '/cnc' ? headers[2] : path === '/realizacje' ? headers[3] : path === '/zestawy' ? headers[1] : ''}/>
             <main className="flex flex-col relative overflow-hidden">
                 <Outlet />
             </main>
