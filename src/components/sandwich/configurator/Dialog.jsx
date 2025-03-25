@@ -55,7 +55,7 @@ const Dialog = ({ dialogRef, selectedFilling, selectedCore, closeDialog, isDialo
         <div className='flex flex-col justify-center items-center'>
           <img src={logo} alt="Logo trailbox" width="150" height="51" loading='lazy' />
           <h2 className='mt-[32px] text-[25px] font-medium max-sm:text-[22px]'>Wyślij zapytanie</h2>
-          <p className='mt-[8px] text-[16px] max-sm:text-center'>o wypełnienie '{filling}' o grubości rdzenia '{core} mm'</p>
+          <p className='mt-[8px] text-[16px] max-sm:text-[14px]'>o wypełnienie '{filling}' o grubości rdzenia '{core} mm'</p>
           <p className='mt-[8px] text-[14px]'>Pamiętaj, że wysłanie wiadomości nie jest równoznaczne ze złożeniem zamówienia – stanowi jedynie zapytanie o ofertę. Skontaktujemy się z Tobą w celu przedstawienia szczegółów.</p>
           <p className='mt-[8px] text-[12px]'>Jeśli chcesz zapytać o więcej niż jeden produkt skorzystaj z formularza kontaktowego lub napisz do nas bezpośrednio email.</p>
 
@@ -70,8 +70,8 @@ const Dialog = ({ dialogRef, selectedFilling, selectedCore, closeDialog, isDialo
               <span className='relative z-10'>Anuluj</span>
             </button>
 
-            <button className='relative cursor-pointer text-white text-[18px] font-light rounded-full bg-[#898989] h-[45px] px-[64px] overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#676767] before:scale-x-0 before:origin-left before:transition-transform before:duration-1000 hover:before:scale-x-100'>
-              <span onClick={sendEmail} className='relative z-10'>Wyślij</span>
+            <button onClick={sendEmail} className='relative cursor-pointer text-white text-[18px] font-light rounded-full bg-[#898989] h-[45px] px-[64px] overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#676767] before:scale-x-0 before:origin-left before:transition-transform before:duration-1000 hover:before:scale-x-100'>
+              <span className='relative z-10'>Wyślij</span>
             </button>
 
           </div>
