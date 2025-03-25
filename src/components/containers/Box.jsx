@@ -1,8 +1,11 @@
 import React from 'react'
+import useIntersectionObserver from '../../hooks/useObserver';
 
 const Box = ({ element, index }) => {
+    const [ref, isVisible] = useIntersectionObserver();
+
     return (
-        <div className={`mt-[48px] ${index % 2 !== 0 ? 'bg-[#F3F7F8] py-[48px]' : 'bg-white'}`}>
+        <div ref={ref} className={`mt-[48px] ${index % 2 !== 0 ? 'bg-[#F3F7F8] py-[48px]' : 'bg-white'} transition-all duration-1000 ease-in-out ${isVisible ? index%2==0 ? 'element-visible-left' : 'element-visible-right' : index%2===0 ? 'element-hidden-left' : 'element-hidden-right'}`}>
             <article className='w-[1240px] mx-auto max-xl:w-[1000px] max-lg:w-[750px] max-md:w-[600px] max-sm:w-[90%]'>
                 <div className={`h-[400px] relative max-lg:h-[625px] ${index !== 0 ? 'max-md:h-[700px] max-xs:!h-[1000px]' : 'max-sm:h-[750px]'}`}>
                     <img src={element.image} alt="Zdjęcie tła" loading="lazy" className='object-cover object-top w-full h-full absolute top-0 left-0 rounded-[40px]' />

@@ -33,7 +33,7 @@ const Contact = () => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
-        <section className='relative w-full mt-[64px] py-[64px] scroll-mt-[120px]' id="kontakt">
+        <section className='relative w-full mt-[64px] py-[64px] scroll-mt-[120px] overflow-hidden' id="kontakt">
             <article ref={ref} className='w-[1240px] mx-auto flex justify-between gap-[16px] max-xl:w-[960px] max-lg:flex-col max-lg:w-[700px] max-md:w-[400px] max-xs:!w-[290px]'>
                 <aside className={`z-10 relative text-white w-[400px] bg-[#898989] rounded-[40px] p-[32px] max-lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <h2 className='text-[25px] font-semibold max-md:text-[20px]'>Informacje kontaktowe</h2>

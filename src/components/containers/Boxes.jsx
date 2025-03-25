@@ -3,16 +3,19 @@ import Box from './Box'
 import containers from '../../data/containers'
 import nonStandardBox from '../../assets/icons/containers/nonstandard-box.svg'
 import lightGrayImg from '../../assets/images/containers/bg-light-gray.webp'
+import useIntersectionObserver from '../../hooks/useObserver'
 
 const Boxes = () => {
+    const [ref, isVisible] = useIntersectionObserver();
+
     return (
-        <section className='mt-[32px]'>
+        <section className='mt-[32px] mb-[64px]'>
             {containers.map((element, index) => (
                 <Box element={element} index={index} key={index} />
             ))}
 
             <div className='bg-[#F3F7F8] mt-[48px] pt-[36px] pb-[64px]'>
-                <article className='relative py-[48px] w-[1240px] h-[315px] mx-auto max-xl:w-[1000px] max-lg:w-[750px] max-md:w-[600px] max-sm:w-[90%] max-sm:h-[350px] max-xs:!h-[425px]'>
+                <article ref={ref} className={`relative py-[48px] w-[1240px] h-[315px] mx-auto max-xl:w-[1000px] max-lg:w-[750px] max-md:w-[600px] max-sm:w-[90%] max-sm:h-[350px] max-xs:!h-[425px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}`}>
                     <img src={lightGrayImg} alt="Zdjęcie tła" loading="lazy" className='object-cover object-top w-full h-full absolute top-0 left-0 rounded-[40px] max-sm:rounded-[20px]' />
                     <div className='z-[1] absolute top-0 left-0 h-full w-full rounded-[40px] bg-[#898989]/90 max-sm:rounded-[20px]' />
 
