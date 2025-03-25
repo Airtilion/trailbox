@@ -13,7 +13,7 @@ const Card = ({ card, index, isVisible }) => {
                 <img src={card.img} alt={`Zdjęcie przedstawiające ${card.title}`} width="330" height="185" loading='lazy' className='rounded-[20px] object-cover' />
 
                 <div className='absolute top-[60%] bg-white w-[240px] h-[60px] rounded-t-[10px] max-xs:top-[53%] max-xs:w-[200px]'>
-                    <h3 className='pt-[10px] px-[10px] text-[20px] font-semibold text-center max-lg:text-[18px]'>{card.title}</h3>
+                    <h3 className='pt-[10px] px-[10px] text-[18px] font-semibold text-center max-lg:text-[16px]'>{card.title}</h3>
                 </div>
 
                 <Link to={`/plyty-sandwich/${card.link}`}>
