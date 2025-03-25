@@ -626,6 +626,20 @@
   }
 }
 
+.animation-show{
+  animation: opacityAnimation 1s ease-in-out;
+}
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* header */
 
 .header-loading {
