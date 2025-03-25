@@ -55,7 +55,7 @@ const Dialog = ({ dialogRef, selectedFilling, selectedCore, closeDialog, isDialo
         <div className='flex flex-col justify-center items-center'>
           <img src={logo} alt="Logo trailbox" width="150" height="51" loading='lazy' />
           <h2 className='mt-[32px] text-[25px] font-medium max-sm:text-[22px]'>Wyślij zapytanie</h2>
-          <p className='mt-[8px] text-[16px]'>o wypełnienie '{filling}' o grubości rdzenia '{core} mm'</p>
+          <p className='mt-[8px] text-[16px] max-sm:text-center'>o wypełnienie '{filling}' o grubości rdzenia '{core} mm'</p>
           <p className='mt-[8px] text-[14px]'>Pamiętaj, że wysłanie wiadomości nie jest równoznaczne ze złożeniem zamówienia – stanowi jedynie zapytanie o ofertę. Skontaktujemy się z Tobą w celu przedstawienia szczegółów.</p>
           <p className='mt-[8px] text-[12px]'>Jeśli chcesz zapytać o więcej niż jeden produkt skorzystaj z formularza kontaktowego lub napisz do nas bezpośrednio email.</p>
 

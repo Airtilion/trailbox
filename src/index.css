@@ -292,7 +292,7 @@
     width: 60px;
     height: 60px;
     right: -60px;
-    box-shadow: -30px 30px #ffffff;
+    box-shadow: -30px 30px rgb(243, 247, 248);
   }
 
   .custom-corners-non::after {
