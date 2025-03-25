@@ -1,5 +1,5 @@
 import React from 'react'
-import videoBg from '../assets/video/Trailbox-25fps.mp4'
+import videoBg from '../assets/video/Trailbox1-25fps.mp4'
 import Navbar from './Navbar'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import { Link } from 'react-router-dom'
