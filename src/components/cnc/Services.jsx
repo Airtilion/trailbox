@@ -1,14 +1,17 @@
 import React from 'react'
 import cncThird from '../../assets/images/cnc/cnc-3.webp'
 import { Link } from 'react-router-dom'
+import useIntersectionObserver from '../../hooks/useObserver';
 
 const Services = () => {
+    const [ref, isVisible] = useIntersectionObserver();
+
     return (
-        <section className="mt-[128px] relative h-[528px] max-xs:!h-[875px]">
+        <section ref={ref} className="mt-[128px] relative h-[528px] max-xs:!h-[875px]">
             <img src={cncThird} alt="Zdjęcie na tle sekcji zakresu usług" loading='lazy' className='absolute top-0 left-0 w-full h-full object-cover' />
             <div className='absolute top-0 left-0 bg-[#000000]/70 w-full h-full' />
 
-            <article className='mt-[156px] w-[1240px] flex justify-end mx-auto z-10 relative max-xl:w-[1000px] max-lg:justify-center max-lg:w-[90%] max-sm:mt-[32px]'>
+            <article className={`mt-[156px] w-[1240px] flex justify-end mx-auto z-10 relative max-xl:w-[1000px] max-lg:justify-center max-lg:w-[90%] max-sm:mt-[32px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
 
                 <div className='rounded-[40px] w-[800px] h-[500px] relative right-[-64px] px-[48px] pt-[32px] pb-[24px] dropShadow-customCnc max-2xl:right-[0px] max-sm:w-[400px] max-sm:h-[700px] max-xs:!px-[24px] max-xs:!w-[270px] max-xs:!h-[1025px]'>
 

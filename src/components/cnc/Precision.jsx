@@ -1,12 +1,15 @@
 import React from 'react'
 import cncFourth from '../../assets/images/cnc/cnc-4.webp'
+import useIntersectionObserver from '../../hooks/useObserver';
 
 const Precision = () => {
+    const [ref, isVisible] = useIntersectionObserver();
+
     return (
-        <section className='mt-[256px] bg-[#F3F7F8] py-[100px] mb-[64px]'>
+        <section ref={ref} className='mt-[256px] bg-[#F3F7F8] py-[100px] mb-[64px]'>
             <article className='w-[1240px] mx-auto flex gap-[64px] max-xl:w-[1000px] max-lg:w-[90%] max-lg:flex-col max-lg:items-center'>
                 
-                <div className='w-[660px] relative max-xl:w-[500px] max-lg:flex max-lg:justify-center max-sm:w-full'>
+                <div className={`w-[660px] relative max-xl:w-[500px] max-lg:flex max-lg:justify-center max-sm:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <img src={cncFourth} alt="Zdjęcie przedstawiające maszynę CNC" loading='lazy' className='object-cover rounded-[5px] shadow-[4px_4px_20px_0_rgba(0,0,0,0.25)]' />
                     <div className='absolute w-[50px] h-[10px] bg-[#898989] right-[10px] top-[41px] max-xl:right-[-15px] max-xl:w-[15px] max-sm:hidden' />
                     <div className='absolute w-[10px] h-[50px] bg-[#898989] rounded-bl-[10px] left-[38px] bottom-[-50px] max-xl:bottom-[22px] max-lg:bottom-[-25px] max-lg:h-[25px] max-sm:hidden
@@ -15,7 +18,7 @@ const Precision = () => {
                     '/>
                 </div>
                 
-                <div className='w-[500px] max-xl:w-[436px] max-lg:w-full'>
+                <div className={`w-[500px] max-xl:w-[436px] max-lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                     <h2 className='text-[25px] font-semibold max-w-[325px] max-sm:text-[22px]'>Precyzja Inżynierii<span className='text-[#898989]'> - Gdy Milimetry Mają Znaczenie</span></h2>
                     <p className='mt-[32px] text-[16px] max-sm:text-[14px]'>W nowoczesnej obróbce CNC liczy się nie tylko technologia, ale i doskonałość wykonania. Każdy detal, każdy cięty i frezowany element musi spełniać najwyższe standardy jakości. Nasze doświadczenie i zaawansowany park maszynowy pozwalają nam realizować nawet najbardziej wymagające projekty, łącząc precyzję, wydajność i nowoczesne rozwiązania.</p>
                     <p className='mt-[16px] text-[16px] max-sm:text-[14px]'>Dzięki zastosowaniu innowacyjnych metod oraz precyzyjnych narzędzi zapewniamy najwyższą jakość obróbki. </p>
