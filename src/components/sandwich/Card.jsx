@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Card = ({ card }) => {
+const Card = ({ card, index, isVisible }) => {
     return (
-        <article className='relative h-[320px] rounded-[20px] dropShadow-custom w-[370px] max-xs:w-[290px] max-xs:h-[270px]'>
+        <article className={`relative h-[320px] rounded-[20px] dropShadow-custom w-[370px] max-xs:w-[290px] max-xs:h-[270px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}`}
+            style={{transitionDelay: `${index*200}ms`}}
+        >
 
             <div className='absolute top-0 left-0 w-full h-full z-10 bg-white clip-custom rounded-[20px]' />
             
