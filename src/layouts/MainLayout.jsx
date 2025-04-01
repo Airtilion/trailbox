@@ -3,9 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import plyty_header from '../assets/images/headers/header-plyty.webp'
-import plyty_cnc from '../assets/images/headers/header-cnc.webp'
-import plyty_realizacje from '../assets/images/headers/header-realizacje.webp'
-import plyty_zestawy from '../assets/images/headers/header-zestawy.webp'
+import plyty_cnc from '../assets/images/cnc_photo.webp'
+import plyty_realizacje from '../assets/images/headers/realizacje-bg.webp'
+import plyty_zestawy from '../assets/images/headers/zestawy_bg.webp'
 import ScrollToSection from "../components/ScrollToSection";
 
 const headers = [
@@ -15,7 +15,7 @@ const headers = [
         image: plyty_header
     },
     {
-        title: 'ZESTAWY KONTENEROWE',
+        title: 'GOTOWE ZESTAWY KONTENEROWE',
         subtitle: 'Funkcjonalne i modułowe rozwiązania dla każdej przestrzeni',
         image: plyty_zestawy
     },
@@ -37,7 +37,7 @@ const MainLayout = () => {
 
     return (
         <>
-            <Header data={path.startsWith('/plyty-sandwich') ? headers[0] : path === '/cnc' ? headers[2] : path === '/realizacje' ? headers[3] : path === '/zestawy' ? headers[1] : ''}/>
+            <Header key={location.pathname} data={path.startsWith('/plyty-sandwich') ? 'ps' : path === '/cnc' ? headers[2] : path === '/realizacje' ? headers[3] : path === '/zestawy' ? headers[1] : ''}/>
             <main className="flex flex-col relative overflow-hidden">
                 <Outlet />
             </main>

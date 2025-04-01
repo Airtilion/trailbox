@@ -1,5 +1,5 @@
 import React from 'react'
-import cncThird from '../../assets/images/cnc/cnc-3.webp'
+import cncThird from '../../assets/images/cnc_photo.webp'
 import { Link } from 'react-router-dom'
 import useIntersectionObserver from '../../hooks/useObserver';
 
@@ -8,7 +8,7 @@ const Services = () => {
 
     return (
         <section ref={ref} className="mt-[128px] relative h-[528px] max-xs:!h-[875px]">
-            <img src={cncThird} alt="Zdjęcie na tle sekcji zakresu usług" loading='lazy' className='absolute top-0 left-0 w-full h-full object-cover' />
+            <img src={cncThird} alt="Zdjęcie na tle sekcji zakresu usług" loading='lazy' className='absolute top-0 left-0 w-full h-full object-cover object-center' />
             <div className='absolute top-0 left-0 bg-[#000000]/70 w-full h-full' />
 
             <article className={`mt-[156px] w-[1240px] flex justify-end mx-auto z-10 relative max-xl:w-[1000px] max-lg:justify-center max-lg:w-[90%] max-sm:mt-[32px] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
@@ -24,8 +24,8 @@ const Services = () => {
                     </Link>
 
                     <div className='relative z-10'>
-                        <h2 className='font-semibold text-[30px] max-lg:text-[25px] max-sm:text-[22px]'>Zakres Naszych Usług <span className='text-[#898989]'>CNC</span></h2>
-                        <p className='mt-[8px] text-[16px] max-w-[550px] max-md:text-[14px]'>Nasza oferta obejmuje przede wszystkim precyzyjną obróbkę frezowaniem, ze szczególnym uwzględnieniem gotowych produktów, takich jak panele Sandwich. Wykonujemy:</p>
+                        <h2 className='font-semibold text-[30px] max-lg:text-[25px] max-sm:text-[22px]'>Profesjonalne usługi <span className='text-[#898989]'>CNC</span></h2>
+                        <p className='mt-[8px] text-[16px] max-w-[550px] max-md:text-[14px]'>Nasza oferta profesjonalnych usług CNC obejmuje przede wszystkim precyzyjną obróbkę frezowaniem, ze szczególnym uwzględnieniem gotowych produktów, takich jak Panele Sandwich. Wykonujemy:</p>
                         <ul className='mt-[32px] list-disc pl-[32px] max-md:text-[15px]'>
                             <li>Frezowanie CNC – obróbka różnego rodzaju materiałów, w tym metali, tworzyw sztucznych i kompozytów.</li>
                             <li>Obróbka Paneli Sandwich – dostosowanie wymiarów, kształtu oraz struktury do indywidualnych wymagań klienta.</li>

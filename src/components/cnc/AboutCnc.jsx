@@ -25,13 +25,13 @@ const AboutCnc = () => {
                 <div className='w-[391px] flex flex-col gap-[32px] max-xl:flex-row max-xl:w-full max-sm:flex-col'>
                     <div className={`bg-white rounded-[40px] px-[25px] py-[32px] shadow-[0_4px_20px_rgba(0,0,0,0.1)] max-xl:w-[50%] max-sm:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                         <span className='outline-[1px] outline-[#898989] text-[#898989] rounded-[40px] px-[24px] py-[10px] max-md:w-full max-md:flex max-md:text-center max-sm:justify-center'>Precyzja i nowoczesność</span>
-                        <p className='mt-[32px] text-[16px] max-sm:text-[14px]'>Wykonujemy uslugi frezowania CNC. Wykorzystujemy przy tym rozwiązania nowoczesnych technologii, by dostarczać naszym klientom produkty spełniające ich oczekiwania oraz założenia projektowe.</p>
+                        <p className='mt-[32px] text-[16px] max-sm:text-[14px]'>Wykonujemy profesjonalne usługi CNC. Dzięki zastosowaniu nowoczesnych technologii dostarczamy naszym klientom produkty spełniające ich oczekiwania oraz wymagania projektowe.</p>
                     </div>
 
                     <div className={`relative max-xl:w-[50%] max-sm:w-full delay-200 transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
                         <img src={cncSecond} alt="Zdjęcie tła sekcji" loading='lazy' className='rounded-[40px] object-cover w-full h-full' />
                         <div className='bg-[#000000]/40 absolute top-0 left-0 w-full h-full rounded-[40px]' />
-                        <p className='absolute top-[50%] -translate-y-[50%] text-white px-[24px] max-sm:text-[14px]'>Oferta obejmuje przede wszystkim obróbkę frezowania naszych gotowych produktów, czyli różnego rodzaju Paneli Sandwich.</p>
+                        <p className='absolute top-[50%] -translate-y-[50%] text-white px-[24px] max-sm:text-[14px]'>Oferta obejmuje przede wszystkim profesjonalne usługi CNC na obróbce i frezowaniu naszych gotowych produktów, czyli różnego rodzaju Paneli Sandwich.</p>
                     </div>
 
                 </div>

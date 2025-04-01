@@ -19,8 +19,8 @@ const Precision = () => {
                 </div>
                 
                 <div className={`w-[500px] max-xl:w-[436px] max-lg:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-right' : 'element-hidden-right'}`}>
-                    <h2 className='text-[25px] font-semibold max-w-[325px] max-sm:text-[22px]'>Precyzja Inżynierii<span className='text-[#898989]'> - Gdy Milimetry Mają Znaczenie</span></h2>
-                    <p className='mt-[32px] text-[16px] max-sm:text-[14px]'>W nowoczesnej obróbce CNC liczy się nie tylko technologia, ale i doskonałość wykonania. Każdy detal, każdy cięty i frezowany element musi spełniać najwyższe standardy jakości. Nasze doświadczenie i zaawansowany park maszynowy pozwalają nam realizować nawet najbardziej wymagające projekty, łącząc precyzję, wydajność i nowoczesne rozwiązania.</p>
+                    <h2 className='text-[25px] font-semibold max-w-[400px] max-sm:text-[22px]'>Profesjonalne usługi CNC<span className='text-[#898989]'> - Gdy Milimetry Mają Znaczenie</span></h2>
+                    <p className='mt-[32px] text-[16px] max-sm:text-[14px]'>W nowoczesnej obróbce CNC kluczowe są nie tylko zaawansowane technologie, ale również perfekcja wykonania. Każdy detal i frezowany element musi spełniać najwyższe standardy jakości. Nasze profesjonalne usługi CNC pozwalają na realizację nawet najbardziej wymagających projektów, łącząc funkcjonalność z estetyką.</p>
                     <p className='mt-[16px] text-[16px] max-sm:text-[14px]'>Dzięki zastosowaniu innowacyjnych metod oraz precyzyjnych narzędzi zapewniamy najwyższą jakość obróbki. </p>
                 </div>
             </article>
