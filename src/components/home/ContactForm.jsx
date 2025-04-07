@@ -53,7 +53,7 @@ const ContactForm = ({ isVisible }) => {
 
             {error && <div className="text-red-500 text-[12px] absolute z-20 top-[100px]">{error}</div>}
             {message && <div className="text-green-500 text-[12px] absolute z-20 top-[100px]">{message}</div>}
-            <form ref={formRef} className='flex flex-wrap justify-between gap-[24px] relative z-10'>
+            <form ref={formRef} className='flex flex-wrap justify-between gap-[32px] relative z-10 max-xl:gap-[24px]'>
                 <div className='flex flex-col w-[330px] max-xl:w-full'>
                     <label htmlFor="name" className='text-[14px] text-[#696969]'>Imię i nazwisko / nazwa firmy</label>
                     <input type="text" id="name" name="name" placeholder='Jan Nowak' className='border-b-2 border-[#898989] h-[40px] text-[14px] outline-none' value={data.name} onChange={(e) => changeData(e, "name")} required />
@@ -71,13 +71,13 @@ const ContactForm = ({ isVisible }) => {
 
                 <div className='flex flex-col w-full'>
                     <label htmlFor="message" className='text-[14px] text-[#696969]'>Treść wiadomości</label>
-                    <textarea id="message" name="message" placeholder='Dzień dobry...' className='border-b-2 border-[#898989] h-[100px] mt-[16px] outline-none resize-none text-[14px]' value={data.message} onChange={(e) => changeData(e, "message")} required />
+                    <textarea id="message" name="message" placeholder='Dzień dobry...' className='border-b-2 border-[#898989] h-[150px] mt-[16px] outline-none resize-none text-[14px]' value={data.message} onChange={(e) => changeData(e, "message")} required />
                 </div>
                 <input type="text" name="additional" className='hidden' />
                 <CustomCheckbox checkboxRef={chRef} />
             </form>
 
-            <button onClick={sendEmail} className='absolute bottom-0 right-0 cursor-pointer text-white text-[20px] font-light rounded-full bg-[#898989] h-[65px] px-[64px] max-xs:!text-[18px] max-xs:!h-[50px] overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#676767] before:scale-x-0 before:origin-left before:transition-transform before:duration-1000 hover:before:scale-x-100'>
+            <button onClick={sendEmail} className='absolute bottom-0 right-0 cursor-pointer text-white text-[20px] font-light rounded-full bg-[#898989] h-[65px] px-[64px] max-xs:!text-[18px] max-xs:!h-[50px] max-xs:!px-[62px] overflow-hidden before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#676767] before:scale-x-0 before:origin-left before:transition-transform before:duration-1000 hover:before:scale-x-100'>
                 <span className='relative z-10'>Wyślij</span>
             </button>
 

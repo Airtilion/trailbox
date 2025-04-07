@@ -11,7 +11,7 @@ const CallToAction = () => {
     <section ref={ref} className='w-full rounded-[40px] relative bg-[#898989] my-[64px] py-[64px] px-[128px] mix-blend-darken flex justify-between items-center gap-[128px] max-2xl:px-[64px] max-xl:gap-[32px] max-xl:pr-[32px] max-lg:px-[32px] max-lg:flex-col-reverse max-lg:py-[32px]'>
         <div className={`flex flex-col gap-[16px] z-20 relative flex-1 max-lg:items-center transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
             <h2 className='font-bold text-[45px] text-white leading-[1.3] max-xl:text-[35px] max-lg:text-center max-sm:text-[25px]'>Jesteśmy gotowi <br /> odpowiedzieć na Twoje potrzeby</h2>
-            <p className='text-white text-[18px] font-light leading-[1.3] max-xl:text-[16px] max-lg:text-center max-sm:text-[14px]'>Chcesz omówić szczegóły? <br /> Kliknij i wypełnij formularz – zaczniemy współpracę od razu!</p>
+            <p className='text-white text-[18px] font-light leading-[1.3] max-xl:text-[16px] max-lg:text-center max-sm:text-[14px]'>Chcesz omówić szczegóły? <br /> Kliknij i wypełnij formularz aby się z nami skontaktować.</p>
             <Link to="/#kontakt">
               <button className='relative overflow-hidden bg-[#353432] text-white text-[15px] rounded-full h-[55px] w-[250px] cursor-pointer custom-button max-xl:h-[50px] max-sm:text-[14px] max-sm:w-[200px]'>
                 <span className='relative z-10'>Przejdź do formularza</span>

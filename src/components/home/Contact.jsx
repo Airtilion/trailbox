@@ -39,14 +39,26 @@ const Contact = () => {
                     <h2 className='text-[25px] font-semibold max-md:text-[20px]'>Informacje kontaktowe</h2>
                     <p className='text-[16px] font-light mt-[8px] max-md:text-[15px] max-xs:!text-[14px]'>Jesteśmy do Twojej dyspozycji! Chcesz dowiedzieć się więcej o naszych płytach warstwowych? Skontaktuj się z nami!</p>
 
-                    <div className='flex flex-col gap-[48px] mt-[32px] max-lg:flex-row max-lg:flex-wrap max-lg:justify-between max-sm:gap-[32px]'>
+                    <div className='flex flex-col gap-[32px] mt-[32px] max-lg:flex-row max-lg:flex-wrap max-lg:justify-between max-sm:gap-[32px]'>
                         {elements.map((element, index) => (
-                            <ContactInfo key={index} text={element.text} icon={element.icon}/>
+                            <ContactInfo key={index} text={element.text} icon={element.icon} />
                         ))}
+
+                        <article className='flex flex-col'>
+                            <h2 className='text-[20px] font-semibold max-sm:text-[20px]'>BIURO</h2>
+                            <p>Tel. +48 533 468 979</p>
+                            <p>a.rasche@trailbox.pl</p>
+                        </article>
+
+                        <article className='flex flex-col'>
+                            <h2 className='text-[20px] font-semibold max-sm:text-[20px]'>DZIAŁ HANDLOWY</h2>
+                            <p>Tel. +48 882 143 803</p>
+                            <p>w.rasche@trailbox.pl</p>
+                        </article>
                     </div>
                 </aside>
 
-                <ContactForm isVisible={isVisible}/>
+                <ContactForm isVisible={isVisible} />
             </article>
             <img src={contactBg} alt="" className='absolute w-full h-full top-0 left-0 object-cover z-0 scale-[1.1]' />
         </section>
