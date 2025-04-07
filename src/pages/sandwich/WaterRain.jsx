@@ -12,7 +12,8 @@ import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "Water Rain Drop Effect",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi laminat poliestrowy w połysku, wzmacniany włóknem szklanym, oraz wysokiej jakości wypełnienie.",
+  titleAbout: "Panel Water Rain Drop Effect - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel Water Rain Drop Effect do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z laminatu poliestrowego w połysku, wzmacnianego włóknem szklanym, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 1.7 mm.",
   maxSize: "Maksymalna możliwa wielkość panela to 3 m x 9.5 m.",
   outerCoating: [
