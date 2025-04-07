@@ -13,7 +13,9 @@ const CallToAction = () => {
             <h2 className='font-bold text-[45px] text-white leading-[1.3] max-xl:text-[35px] max-lg:text-center max-sm:text-[25px]'>Jesteśmy gotowi <br /> odpowiedzieć na Twoje potrzeby</h2>
             <p className='text-white text-[18px] font-light leading-[1.3] max-xl:text-[16px] max-lg:text-center max-sm:text-[14px]'>Chcesz omówić szczegóły? <br /> Kliknij i wypełnij formularz – zaczniemy współpracę od razu!</p>
             <Link to="/#kontakt">
-              <button className='bg-[#353432] text-white text-[15px] rounded-full h-[55px] w-[250px] cursor-pointer max-xl:h-[50px] max-sm:text-[14px] max-sm:w-[200px]'>Przejdź do formularza</button>
+              <button className='relative overflow-hidden bg-[#353432] text-white text-[15px] rounded-full h-[55px] w-[250px] cursor-pointer custom-button max-xl:h-[50px] max-sm:text-[14px] max-sm:w-[200px]'>
+                <span className='relative z-10'>Przejdź do formularza</span>
+              </button>
             </Link>
         </div>
 
