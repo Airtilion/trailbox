@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import plyty_cnc from '../assets/images/cnc_photo.webp'
-import plyty_realizacje from '../assets/images/headers/realizacje-bg.webp'
+import plyty_realizacje from '../assets/images/xD.jpg'
 import plyty_zestawy from '../assets/images/headers/zestawy_bg.webp'
 import ScrollToSection from "../components/ScrollToSection";
 
