@@ -12,7 +12,8 @@ import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "High Impact",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi laminat poliestrowy wzmacniany włóknem szklanym oraz wysokiej jakości wypełnienie.",
+  titleAbout: "Panel High Impact - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel High Impact do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z laminatu poliestrowego w połysku, wzmacnianego włóknem szklanym, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 1 - 1.5 mm",
   maxSize: "Maksymalna możliwa wielkość panela to 3 m x 9.5 m.",
   outerCoating: [

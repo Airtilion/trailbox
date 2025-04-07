@@ -72,6 +72,7 @@ const fillingsHighImpact = [
     {
         title: "XPS",
         imgSmall: xpsSmall,
+        imgAlt: "Panel High Impact z wypełnieniem XPS - płyta warstwowa do zabudowy nadwozi z laminatem poliestrowym.",
         imgFull: xps,
         cores: [
             {
@@ -129,6 +130,7 @@ const fillingsHighImpact = [
     {
         title: "PET",
         imgSmall: petSmall,
+        imgAlt: "Panel High Impact z wypełnieniem PET - trwała płyta warstwowa z laminatem poliestrowo-szklanym do nadwozi.",
         imgFull: pet,
         cores: [
             {
@@ -166,6 +168,7 @@ const fillingsHighImpact = [
     {
         title: "Plaster miodu",
         imgSmall: plasterSmall,
+        imgAlt: "Panel High Impact z wypełnieniem plaster miodu - lekka płyta warstwowa z estetycznym laminatem do zabudowy.",
         imgFull: plaster,
         cores: [
             {
@@ -198,6 +201,7 @@ const fillingsHighImpact = [
     {
         title: "PP",
         imgSmall: ppSmall,
+        imgAlt: "Panel High Impact z wypełnieniem PP - płyta warstwowa z laminatem poliestrowym i żelkotem antybakteryjnym.",
         imgFull: pp,
         cores: [
             {

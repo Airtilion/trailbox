@@ -72,6 +72,7 @@ const fillingsGewebe = [
     {
         title: "XPS",
         imgSmall: xpsSmall,
+        imgAlt: "Panel Gewebe z wypełnieniem XPS - płyta warstwowa do zabudowy nadwozi z laminatem poliestrowym.",
         imgFull: xps,
         cores: [
             {
@@ -129,6 +130,7 @@ const fillingsGewebe = [
     {
         title: "PET",
         imgSmall: petSmall,
+        imgAlt: "Panel Gewebe z wypełnieniem PET - trwała płyta warstwowa z laminatem poliestrowo-szklanym do nadwozi.",
         imgFull: pet,
         cores: [
             {
@@ -166,6 +168,7 @@ const fillingsGewebe = [
     {
         title: "Plaster miodu",
         imgSmall: plasterSmall,
+        imgAlt: "Panel Gewebe z wypełnieniem plaster miodu - lekka płyta warstwowa z estetycznym laminatem do zabudowy.",
         imgFull: plaster,
         cores: [
             {
@@ -198,6 +201,7 @@ const fillingsGewebe = [
     {
         title: "PP",
         imgSmall: ppSmall,
+        imgAlt: "Panel Gewebe z wypełnieniem PP - płyta warstwowa z laminatem poliestrowym i żelkotem antybakteryjnym.",
         imgFull: pp,
         cores: [
             {

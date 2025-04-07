@@ -12,7 +12,8 @@ import CallToAction from '../../components/CallToAction'
 
 const aboutPanel = {
   title: "Gewebe",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi laminat poliestrowy, wzmacniany włóknem szklanym o niejednorodnej strukturze, oraz wysokiej jakości wypełnienie.",
+  titleAbout: "Panel Gewebe - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel Gewebe do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z laminatu poliestrowego, wzmacnianego włóknem szklanym o niejednorodnej strukturze, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 1.5 - 2 mm.",
   maxSize: "Maksymalna możliwa wielkość panela to 3 m x 9.5 m.",
   outerCoating: [
