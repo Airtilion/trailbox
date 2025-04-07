@@ -100,7 +100,7 @@ const HighGloss = () => {
 
           <div className='mt-[32px] flex gap-[64px] max-lg:flex-col max-lg:items-center'>
 
-            <ImageSection selectedImage={selectedImage} />
+            <ImageSection selectedImage={selectedImage} altImg="Powiększone zdjęcie wybranego paneluHigh Gloss z konfiguratora" />
 
             <div className='relative w-[415px] max-lg:w-full'>
 

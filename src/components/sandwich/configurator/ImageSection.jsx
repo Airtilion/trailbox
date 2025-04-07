@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react/dist/iconify.js';
 
-const ImageSection = ({selectedImage}) => {
+const ImageSection = ({selectedImage, altImg}) => {
     const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
     const [isZoomed, setIsZoomed] = useState(false);
     const [isFullScreen, setIsFullScreen] = useState(false);
@@ -61,7 +61,7 @@ const ImageSection = ({selectedImage}) => {
 
     return (
         <div className='w-[650px] h-[405px] rounded-[40px] overflow-hidden relative max-xl:w-[550px] max-lg:w-full'>
-            <img src={selectedImage} alt="Zdjęcie panelu" loading='lazy' className='w-full h-full object-cover transition-transform duration-300'
+            <img src={selectedImage} alt={altImg} loading='lazy' className='w-full h-full object-cover transition-transform duration-300'
                 style={{ transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`, transform: isZoomed ? "scale(2.5)" : "scale(1)", }}
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave} />
@@ -79,7 +79,7 @@ const ImageSection = ({selectedImage}) => {
                 >
 
                     <img
-                        src={selectedImage} alt="Zdjęcie panelu"
+                        src={selectedImage} alt={altImg}
                         // style={{
                         //     transform: `scale(${isImageZoomed ? 1.5 : 1}) translate(${offset.x}px, ${offset.y}px)`,
                         //     cursor: isImageZoomed ? 'grabbing' : 'zoom-in'
