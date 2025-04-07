@@ -72,6 +72,7 @@ const fillingsSuperPlus = [
     {
         title: "XPS",
         imgSmall: xpsSmall,
+        imgAlt: "Panel Super Plus z wypełnieniem XPS - płyta warstwowa do zabudowy nadwozi z laminatem poliestrowym.",
         imgFull: xps,
         cores: [
             {
@@ -129,6 +130,7 @@ const fillingsSuperPlus = [
     {
         title: "PET",
         imgSmall: petSmall,
+        imgAlt: "Panel Super Plus z wypełnieniem PET - trwała płyta warstwowa z laminatem poliestrowo-szklanym do nadwozi.",
         imgFull: pet,
         cores: [
             {
@@ -166,6 +168,7 @@ const fillingsSuperPlus = [
     {
         title: "Plaster miodu",
         imgSmall: plasterSmall,
+        imgAlt: "Panel Super Plus z wypełnieniem plaster miodu - lekka płyta warstwowa z estetycznym laminatem do zabudowy.",
         imgFull: plaster,
         cores: [
             {
@@ -198,6 +201,7 @@ const fillingsSuperPlus = [
     {
         title: "PP",
         imgSmall: ppSmall,
+        imgAlt: "Panel Super Plus z wypełnieniem PP - płyta warstwowa z laminatem poliestrowym i żelkotem antybakteryjnym.",
         imgFull: pp,
         cores: [
             {

@@ -4,7 +4,7 @@ import Core from './Core'
 import RequestButton from './RequestButton'
 import { Icon } from '@iconify/react/dist/iconify.js'
 
-const Configurator = ({ fillings, selectedFilling, setSelectedFilling, selectedCore, setSelectedCore, selectedFillingObject, openDialog }) => {
+const Configurator = ({ fillings, selectedFilling, setSelectedFilling, selectedCore, setSelectedCore, selectedFillingObject, openDialog, titlePanel }) => {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     const handleToggleCollapse = () => {
@@ -44,7 +44,7 @@ const Configurator = ({ fillings, selectedFilling, setSelectedFilling, selectedC
 
             </div>
 
-            <RequestButton openDialog={openDialog} selectedFilling={selectedFilling} selectedCore={selectedCore} />
+            <RequestButton openDialog={openDialog} selectedFilling={selectedFilling} selectedCore={selectedCore} titlePanel={titlePanel} />
         </article>
     )
 }

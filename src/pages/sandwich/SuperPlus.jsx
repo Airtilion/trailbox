@@ -12,7 +12,8 @@ import Dialog from '../../components/sandwich/configurator/Dialog';
 
 const aboutPanel = {
   title: "Super Plus",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi laminat poliestrowy wzmacniany włóknem szklanym oraz wysokiej jakości wypełnienie.",
+  titleAbout: "Panel Super Plus - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel Super Plus do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z laminatu poliestrowego w połysku, wzmacnianego włóknem szklanym, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 1 mm, 1.5 mm oraz 2 mm.",
   maxSize: "Maksymalna możliwa wielkość panela to 3 m x 9.5 m.",
   outerCoating: [
@@ -105,7 +106,7 @@ const SuperPlus = () => {
             <div className='relative w-[415px] max-lg:w-full'>
 
               <Type title={aboutPanel.title} />
-              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} />
+              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} titlePanel={aboutPanel.title} />
 
             </div>
 
