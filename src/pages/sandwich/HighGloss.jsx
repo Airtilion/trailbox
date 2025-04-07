@@ -12,7 +12,8 @@ import Dialog from '../../components/sandwich/configurator/Dialog'
 
 const aboutPanel = {
   title: "High Gloss",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi laminat poliestrowy w połysku, wzmacniany włóknem szklanym, oraz wysokiej jakości wypełnienie.",
+  titleAbout: "Panel High Gloss - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel High Gloss do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z laminatu poliestrowego w połysku, wzmacnianego włóknem szklanym, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 1.5 mm - 4.0 mm.",
   maxSize: "Maksymalna możliwa wielkość panela to 3 m x 9.5 m.",
   outerCoating: [
@@ -100,12 +101,12 @@ const HighGloss = () => {
 
           <div className='mt-[32px] flex gap-[64px] max-lg:flex-col max-lg:items-center'>
 
-            <ImageSection selectedImage={selectedImage} altImg="Powiększone zdjęcie wybranego paneluHigh Gloss z konfiguratora" />
+            <ImageSection selectedImage={selectedImage} altImg="Powiększone zdjęcie wybranego panelu High Gloss z konfiguratora" />
 
             <div className='relative w-[415px] max-lg:w-full'>
 
               <Type title={aboutPanel.title} />
-              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} />
+              <Configurator fillings={fillings} selectedFilling={selectedFilling} setSelectedFilling={setSelectedFilling} selectedCore={selectedCore} setSelectedCore={setSelectedCore} selectedFillingObject={selectedFillingObject} openDialog={openDialog} titlePanel={aboutPanel.title} />
 
             </div>
 

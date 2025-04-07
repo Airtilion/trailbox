@@ -3,7 +3,7 @@ import React from 'react'
 const Description = ({ aboutPanel }) => {
     return (
         <article className='w-[650px] max-xl:w-[500px] max-lg:w-full'>
-            <h3 className='text-[25px] font-semibold max-sm:text-[20px]'>Panel {aboutPanel.titleAbout}</h3>
+            <h3 className='text-[25px] font-semibold max-sm:text-[20px]'>{aboutPanel.titleAbout}</h3>
             <p className='mt-[8px] text-[16px] max-sm:text-[14px]'>{aboutPanel.desc}</p>
             <div className='mt-[8px] text-[16px] max-sm:text-[14px]'>
                 <p>{aboutPanel.standardThickness}</p>
