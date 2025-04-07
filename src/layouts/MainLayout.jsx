@@ -27,27 +27,27 @@ const headers = [
 
 const sandwichHeaders = {
     "panel-super-plus": {
-        title: 'Panel Super Plus do Zabudowy Nadwozi',
+        title: 'Panel Super Plus',
         subtitle: 'Idealne rozwiązanie dla trwałych i estetycznych konstrukcji',
     },
     "panel-high-gloss": {
-        title: 'Panel High Gloss do Zabudowy Nadwozi',
+        title: 'Panel High Gloss',
         subtitle: 'Estetyczne i nowoczesne rozwiązanie dla Twoich projektów',
     },
     "panel-high-strength-extreme": {
-        title: 'Panel High Strength Extreme do Zabudowy Nadwozi',
+        title: 'Panel High Strength Extreme',
         subtitle: 'Maksymalna wytrzymałość dla wymagających zastosowań',
     },
     "panel-water-rain": {
-        title: 'Panel Water Rain Drop Effect do Zabudowy Nadwozi',
+        title: 'Panel Water Rain Drop Effect',
         subtitle: 'Unikalny design i wysoka jakość w jednym',
     },
     "panel-high-impact": {
-        title: 'Panel High Impact do Zabudowy Nadwozi',
+        title: 'Panel High Impact',
         subtitle: 'Niezawodna ochrona i trwałość w każdych warunkach.',
     },
     "panel-gewebe": {
-        title: 'Panel Gewebe do Zabudowy Nadwozi',
+        title: 'Panel Gewebe',
         subtitle: 'Wyjątkowa struktura i wysoka funkcjonalność dla Twoich projektów.',
     },
 }
