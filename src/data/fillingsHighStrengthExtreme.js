@@ -72,6 +72,7 @@ const fillingsHighStrengthExtreme = [
     {
         title: "XPS",
         imgSmall: xpsSmall,
+        imgAlt: "Panel High Strength Extreme z wypełnieniem XPS - płyta warstwowa do zabudowy nadwozi z laminatem poliestrowym.",
         imgFull: xps,
         cores: [
             {
@@ -129,6 +130,7 @@ const fillingsHighStrengthExtreme = [
     {
         title: "PET",
         imgSmall: petSmall,
+        imgAlt: "Panel High Strength Extreme z wypełnieniem PET - trwała płyta warstwowa z laminatem poliestrowo-szklanym do nadwozi.",
         imgFull: pet,
         cores: [
             {
@@ -166,6 +168,7 @@ const fillingsHighStrengthExtreme = [
     {
         title: "Plaster miodu",
         imgSmall: plasterSmall,
+        imgAlt: "Panel High Strength Extreme z wypełnieniem plaster miodu - lekka płyta warstwowa z estetycznym laminatem do zabudowy.",
         imgFull: plaster,
         cores: [
             {
@@ -198,6 +201,7 @@ const fillingsHighStrengthExtreme = [
     {
         title: "PP",
         imgSmall: ppSmall,
+        imgAlt: "Panel High Strength Extreme z wypełnieniem PP - płyta warstwowa z laminatem poliestrowym i żelkotem antybakteryjnym.",
         imgFull: pp,
         cores: [
             {

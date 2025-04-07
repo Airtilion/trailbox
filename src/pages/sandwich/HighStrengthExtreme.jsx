@@ -12,7 +12,8 @@ import Dialog from '../../components/sandwich/configurator/Dialog'
 
 const aboutPanel = {
   title: "High Strength Extreme",
-  desc: "Płyta warstwowa do zabudowy nadwozi, w skład której wchodzi najwydajniejszy laminat poliestrowy wzmacniany włóknem szklanym z warstwą tkaniny rowingowej oraz wysokiej jakości pianka XPS.",
+  titleAbout: "Panel High Strength Extreme - Płyta Warstwowa do Zabudowy Nadwozi",
+  desc: "Panel High Strength Extreme do zabudowy nadwozi to idealny wybór dla Twoich projektów. Ta nowoczesna płyta warstwowa składa się z najwydajniejszego laminatu poliestrowego, wzmacnianego włóknem szklanym z warstwą tkaniny rowingowej, oraz wysokiej jakości wypełnienia.",
   standardThickness: "Standardowa grubość laminatu to 0.9 - 1.4 mm.",
   maxSize: "Maksymalna możliwa wielkość panela to 2.5 m x 9.5 m.",
   outerCoating: [
