@@ -9,19 +9,19 @@ const BusinessDesc = () => {
     const [ref2, isVisible2] = useIntersectionObserver();
     return (
         <section className='w-[1240px] mx-auto flex flex-col gap-[80px] mt-[32px] max-2xl:w-[1000px] max-xl:w-[960px] max-lg:w-[90%] max-sm:gap-[64px] scroll-mt-[1240px]' id="o-nas">
-            <article className={`w-full flex gap-[96px] max-lg:flex-col-reverse max-md:gap-[64px] `}>
+            <article className={`w-full flex gap-[96px] max-lg:flex-col-reverse max-md:gap-[64px]`}>
 
                 <div ref={ref} className={`mix-blend-darken rounded-[40px] flex-1 relative max-lg:w-[600px] max-lg:mx-auto max-md:w-[90%] max-lg:rounded-[30px] max-sm:w-full transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-left' : 'element-hidden-left'}`}>
                     <div className='l-corners absolute top-0 right-0 bg-white w-[300px] h-[96px] flex justify-center items-center rounded-bl-[40px] z-20 max-md:w-[50%] max-sm:w-[75%]'>
                         <h2 className='text-[25px] font-semibold text-[#898989] max-md:text-[20px]'>Pasja i precyzja <br /> <span className='text-black'>w każdym detalu</span></h2>
                     </div>
                     <img src={sectionPhoto} alt="Zdjęcie pokryć paneli wartstowych" lading="lazy" className='rounded-[40px] relative z-10 h-full object-cover max-lg:rounded-[30px] max-sm:min-h-[350px]' />
-                    <span className='dotted w-[170px] h-[170px] absolute bottom-[-30px] right-[-30px] z-0 max-md:w-[120px] max-md:h-[120px] max-sm:bottom-[-18px] max-sm:right-[-18px]'></span>
+                    {/* <span className='dotted w-[170px] h-[170px] absolute bottom-[-30px] right-[-30px] z-0 max-md:w-[120px] max-md:h-[120px] max-sm:bottom-[-18px] max-sm:right-[-18px]'></span> */}
                 </div>
 
                 <div ref={ref2} className={`flex-1 flex flex-col gap-[16px] self-end max-lg:w-[90%] max-lg:mx-auto max-sm:w-full transition-all duration-1000 ease-in-out ${isVisible2 ? 'element-visible-right' : 'element-hidden-right'}`}>
-                    <h3 className='text-[18px] font-semibold max-xl:text-[16px]'>Realizujemy to, co możesz mieć w zasięgu ręki.</h3>
-                    <p className='text-[15px] font-light max-xl:text-[14px]'>TRAILBOX to ekspert w produkcji płyt warstwowych. Firma od początku swojego istnienia buduje swoja działalność w oparciu o przejrzystość współpracy, lojalność i troskę o jak najlepiej pojęte dobro klienta. Posiadamy rozwinięta sieć odbiorców na rynku polskim oraz na rynkach zagranicznych. Stale poszerzamy nasze doświadczenie w różnych segmentach rynku, oferując nowatorskie rozwiązania.</p>
+                    {/* <h3 className='text-[18px] font-semibold max-xl:text-[16px]'>Realizujemy to, co możesz mieć w zasięgu ręki.</h3> */}
+                    <p className='text-[15px] font-light max-xl:text-[14px]'>Witamy na stronie internetowej TRAILBOX. Jesteśmy producentem płyt warstwowych służących do wielu zastosowań. Nasza firma od początku swojego istnienia buduje swoja działalność w oparciu o przejrzystość współpracy, lojalność i troskę o jak najlepiej pojęte dobro klienta. Posiadamy rozwinięta sieć odbiorców na rynku polskim oraz na rynkach zagranicznych. Stale poszerzamy nasze doświadczenie w różnych segmentach rynku, oferując nowatorskie rozwiązania.</p>
                     <p className='text-[15px] font-light max-xl:text-[14px]'>Nasze płyty warstwowe wyróżniają się precyzją wykonania i trwałością, co zawdzięczamy pasji do detali i zaawansowanym technologiom. Budujemy zaufanie dzięki starannemu procesowi produkcji oraz najnowszym technologiom, dostarczając produkty najwyższej jakości. Wysoki standard utrzymujemy poprzez wykorzystywanie materiałów trwałych i innowacyjnych pod względem funkcjonalnym, stale proponując je naszym obecnym i nowym Klientom. Obsługujemy Klientów kompleksowo, zarówno w otoczeniu krajowym, jak i miedzy narodowym, budując partnerskie relacje.</p>
                 </div>
 

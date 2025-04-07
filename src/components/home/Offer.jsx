@@ -1,7 +1,7 @@
 import React from 'react'
 
 import zestawyBg from '../../assets/images/home/zestawy.webp'
-import plytyBg from '../../assets/images/home/oferta-2.webp'
+import plytyBg from '../../assets/images/home/z2_4.webp'
 import cncBg from '../../assets/images/home/cnc.webp'
 import OfferTile from './OfferTile'
 import useIntersectionObserver from '../../hooks/useObserver'

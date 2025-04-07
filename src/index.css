@@ -698,3 +698,7 @@ dialog::backdrop {
 .custom-button:hover::before {
   transform: scaleX(1)
 }
+
+.test:hover > .test1 > img {
+  transform: scale(1.2);
+}
