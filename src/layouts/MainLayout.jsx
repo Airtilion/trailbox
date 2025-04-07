@@ -70,7 +70,7 @@ const MainLayout = () => {
     } else if (path === '/zestawy') {
         headerData = headers[0];
     } else if (path === '/cnc') {
-        headerData = headers[1];
+        headerData = 'cnc'
     } else if (path === '/realizacje') {
         headerData = headers[2];
     }
