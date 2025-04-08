@@ -37,7 +37,7 @@ const elements = [
 const Slider = () => {
     return (
         <section className='my-[64px]'>
-            <article className='w-[1240px] mx-auto max-xl:w-[1000px] max-lg:w-[90%]'>
+            <article className='w-[1240px] mx-auto max-xl:w-[810px] max-lg:w-[380px] max-xs:!w-[90%]'>
                 <h3 className='text-[30px] font-semibold mb-[32px] max-sm:text-[22px]'>Zobacz wybrane realizacje</h3>
                 <Swiper
                     modules={[Autoplay]}
@@ -52,7 +52,7 @@ const Slider = () => {
                         0: {
                             slidesPerView: 1,
                         },
-                        768: {
+                        1024: {
                             slidesPerView: 2,
                         },
                         1280: {
@@ -66,9 +66,9 @@ const Slider = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-                <div className='flex justify-center mt-[32px]'>
+                <div className='flex justify-center mt-[32px] max-xs:!w-[90%] mx-auto'>
                     <Link to="/realizacje">
-                        <button className='cursor-pointer relative overflow-hidden custom-button bg-[#898989] w-[400px] h-[55px] rounded-full text-white flex items-center justify-center gap-[16px] shadow-[0px_4px_20px_#00000040]'>
+                        <button className='cursor-pointer relative overflow-hidden custom-button bg-[#898989] w-[400px] h-[55px] rounded-full text-white flex items-center justify-center gap-[16px] shadow-[0px_4px_20px_#00000040] max-xs:!w-[100%] max-xs:px-[16px]'>
                             <Icon icon="solar:gallery-bold" width="24" height="24" className='z-10 relative' />
                             <span className='relative z-10 '>Kliknij aby przejść do pełnej galerii</span>
                         </button>
