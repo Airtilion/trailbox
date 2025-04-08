@@ -15,12 +15,12 @@ const headers = [
     },
     {
         title: 'USŁUGI CNC',
-        subtitle: 'Funkcjonalne i modułowe rozwiązania dla każdej przestrzeni',
+        subtitle: 'Precyzja nawet przy najbardziej wymagających projektach',
         image: plyty_cnc
     },
     {
         title: 'REALIZACJE',
-        subtitle: 'Funkcjonalne i modułowe rozwiązania dla każdej przestrzeni',
+        subtitle: 'Zobacz, jak nasze produkty sprawdzają się w praktyce',
         image: plyty_realizacje
     }
 ]
