@@ -12,6 +12,7 @@ import slider6 from '../../assets/images/containers/slider/slider-6.webp'
 
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import useIntersectionObserver from '../../hooks/useObserver';
 
 const elements = [
     {
@@ -34,10 +35,12 @@ const elements = [
     },
 ]
 
+
 const Slider = () => {
+    const [ref, isVisible] = useIntersectionObserver();
     return (
-        <section className='my-[64px]'>
-            <article className='w-[1240px] mx-auto max-xl:w-[810px] max-lg:w-[380px] max-xs:!w-[90%]'>
+        <section ref={ref} className='my-[64px]'>
+            <article className={`w-[1240px] mx-auto max-xl:w-[810px] max-lg:w-[380px] max-xs:!w-[90%] transition-all duration-1000 ease-in-out ${isVisible ? 'element-visible-bottom' : 'element-hidden-bottom'}`}>
                 <h3 className='text-[30px] font-semibold mb-[32px] max-sm:text-[22px]'>Zobacz wybrane realizacje</h3>
                 <Swiper
                     modules={[Autoplay]}
