@@ -36,7 +36,7 @@ const Offer = () => {
         <article className='w-[1240px] mx-auto flex flex-col gap-[64px] max-2xl:w-[1000px] max-xl:w-[960px] max-lg:w-[90%]'>
             <div ref={ref2} className={`flex gap-[64px] items-center max-lg:flex-col max-lg:gap-[16px] transition-all duration-1000 ease-in-out ${isVisible2 ? 'element-visible-bottom' : 'element-hidden-bottom'}`}>
                 <h2 ref={ref} className='text-[30px] font-semibold w-[450px] max-lg:w-full max-md:text-[20px]'>Kompleksowe rozwiązania dla Twojego biznesu</h2>
-                <p className='text-[16px] font-light flex-1 max-lg:text-[15px] max-md:text-[14px]'>Specjalizujemy się w usługach związanych z płytami warstwowymi, oferując zestawy kontenerowe do samodzielnego montażu oraz precyzyjne frezowanie CNC. Nasze płyty warstwowe są kluczowym elementem tych rozwiązań, zapewniając niezawodność i trwałość w każdym zastosowaniu. W naszej ofercie znajdą Państwo szeroki wachlarz usług, które odpowiadają na różnorodne potrzeby zarówno w budownictwie, jak i branży przemysłowej.</p>
+                <p className='text-[16px] font-light flex-1 max-lg:text-[15px] max-md:text-[14px]'>Specjalizujemy się w usługach związanych z płytami warstwowymi, oferując zestawy kontenerowe do samodzielnego montażu oraz precyzyjne frezowanie CNC. Nasze płyty warstwowe są kluczowym elementem tych rozwiązań, zapewniając niezawodność i trwałość w każdym zastosowaniu. W naszej ofercie znajdą Państwo szeroki wachlarz usług, które odpowiadają na różnorodne potrzeby zarówno w motoryzacji, budownictwie, jak i branży przemysłowej.</p>
             </div>
             <div className='flex justify-between max-lg:flex-col max-lg:gap-[32px] max-lg:items-center'>
                 {cards.map((item, index) => (
