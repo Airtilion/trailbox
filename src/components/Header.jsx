@@ -1,5 +1,5 @@
 import React from 'react'
-import videoBg from '../assets/video/Trailbox2-25fps.mp4'
+import videoBg from '../assets/video/Trailbox_main-4.mp4'
 import videoPanele from '../assets/video/p_warstwowe.mp4'
 import videoCnc from '../assets/video/Trailbox-2.mp4'
 import Navbar from './Navbar'
@@ -43,7 +43,7 @@ const Header = ({ data }) => {
                 <source src={videoCnc} type="video/mp4" />
               </video>
             ) : (
-              <video className='cp object-cover brightness-50 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
+              <video className='cp object-cover brightness-40 rounded-[40px] h-full w-full z-0 max-xl:rounded-[30px]' autoPlay muted loop>
                 <source src={videoBg} type="video/mp4" />
               </video>
             )}
