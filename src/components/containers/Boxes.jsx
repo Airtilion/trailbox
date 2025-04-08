@@ -9,7 +9,7 @@ const Boxes = () => {
     const [ref, isVisible] = useIntersectionObserver();
 
     return (
-        <section className='mt-[32px] mb-[64px]'>
+        <section className='mt-[32px]'>
             {containers.map((element, index) => (
                 <Box element={element} index={index} key={index} />
             ))}
