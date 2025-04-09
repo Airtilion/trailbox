@@ -1,5 +1,5 @@
 import React from 'react'
-import cncThird from '../../assets/images/cnc_photo.webp'
+import cncThird from '../../assets/images/cnc.webp'
 import { Link } from 'react-router-dom'
 import useIntersectionObserver from '../../hooks/useObserver';
 

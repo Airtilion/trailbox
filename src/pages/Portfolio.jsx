@@ -1,11 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
 import CallToAction from '../components/CallToAction';
-import test from '../assets/images/background.webp'
 import useIntersectionObserver from '../hooks/useObserver';
+import { useLocation } from 'react-router-dom';
+import BgImage from '../components/BgImage';
 
 
 const Portfolio = () => {
   const [ref, isVisible] = useIntersectionObserver();
+  const location = useLocation();
+  const canonicalUrl = `https://trailbox.pl${location.pathname}`
+
+  console.log(canonicalUrl);
 
   // Importujemy wszystkie pliki .webp z katalogu assets/images/gallery
   const images = import.meta.glob('/src/assets/images/gallery/*.webp', { eager: true });
@@ -84,9 +89,7 @@ const Portfolio = () => {
         <div ref={sentinelRef} className='h-1'></div>
       </section>
       <CallToAction />
-      <div className='fixed z-[-1] w-full h-dvh top-0 left-0 bg-white'>
-        <img src={test} alt="" className='w-full h-full object-cover opacity-10' />
-      </div>
+      <BgImage />
     </>
   );
 };

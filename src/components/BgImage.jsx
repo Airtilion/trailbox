@@ -1,5 +1,5 @@
 import React from 'react'
-import bg from '../assets/images/cnc_photo.webp'
+import bg from '../assets/images/cnc.webp'
 
 const BgImage = () => {
     return (
