@@ -68,7 +68,7 @@ const Header = ({ data }) => {
           <p className='text-[30px] text-white max-xl:text-[25px] max-lg:text-[20px] max-sm:text-center max-sm:text-[15px] left-loading delay-500'>{data === '' ? 'służące do wielu zastosowań' : data === 'ps' ? 'Innowacyjna technologia łącząca lekkość z wytrzymałością' : data === 'cnc' ? 'Funkcjonalne i modułowe rozwiązania dla każdej przestrzeni' : data.subtitle}</p>
         </div>
 
-        <Link to="/#kontakt">
+        <Link to="/#kontakt" title='Przejdź do sekcji z kontaktem'>
           <button className='w-[250px] h-[55px] rounded-full z-20 bg-[#898989] cursor-pointer absolute bottom-0 right-0 flex justify-center items-center gap-[8px] shadow-[0px_4px_20px_#00000040] overflow-hidden custom-button max-xl:w-[220px] max-md:hidden'>
             <Icon icon="solar:letter-bold" width="26" height="26" className="relative z-10 text-white max-xl:w-[24px]" />
             <p className='text-white text-[20px] relative z-10 max-xl:text-[16px]'>Napisz do nas</p>

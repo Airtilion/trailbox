@@ -14,7 +14,7 @@ const OfferTile = ({title, desc, img, link, isVisible, index}) => {
             <img src={img} alt="Zdjęcie promujące produkt" loading="lazy" className='absolute top-0 left-0 h-full w-full object-cover z-10 rounded-[40px] duration-[3000ms]'/>
         </div>
 
-        <Link to={link}>
+        <Link to={link} title={`Przejdź na stronę ${title}`}>
             <div className='w-[80px] h-[80px] bg-[#898989] absolute top-[16px] right-[16px] z-40 rounded-full flex justify-center items-center duration-500 hover:bg-[#676767] hover:scale-105'>
                 <Icon icon="radix-icons:arrow-top-right" width="40" height="40" className="text-white"/>
             </div>
