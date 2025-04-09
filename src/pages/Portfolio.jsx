@@ -3,7 +3,6 @@ import CallToAction from '../components/CallToAction';
 import useIntersectionObserver from '../hooks/useObserver';
 import BgImage from '../components/BgImage';
 
-
 const Portfolio = () => {
   const [ref, isVisible] = useIntersectionObserver();
 
