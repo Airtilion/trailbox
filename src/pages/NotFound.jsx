@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/images/logo-white.svg'
-import bg from '../assets/images/background.webp'
+import bg from '../assets/images/cnc.webp'
 import { Link } from 'react-router-dom'
 
 const NotFound = () => {
