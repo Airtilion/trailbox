@@ -1,8 +1,4 @@
 import React, { Suspense, lazy } from 'react'
-// import BusinessDesc from '../components/home/BusinessDesc'
-// import Offer from '../components/home/Offer'
-// import WhyUs from '../components/home/WhyUs'
-// import Contact from '../components/home/Contact'
 
 const BusinessDesc = lazy(() => import('../components/home/BusinessDesc'));
 const Offer = lazy(() => import('../components/home/Offer'));

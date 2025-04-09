@@ -1,16 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import CallToAction from '../components/CallToAction';
 import useIntersectionObserver from '../hooks/useObserver';
-import { useLocation } from 'react-router-dom';
 import BgImage from '../components/BgImage';
 
 
 const Portfolio = () => {
   const [ref, isVisible] = useIntersectionObserver();
-  const location = useLocation();
-  const canonicalUrl = `https://trailbox.pl${location.pathname}`
-
-  console.log(canonicalUrl);
 
   // Importujemy wszystkie pliki .webp z katalogu assets/images/gallery
   const images = import.meta.glob('/src/assets/images/gallery/*.webp', { eager: true });
