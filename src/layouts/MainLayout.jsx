@@ -1,9 +1,9 @@
-import { Outlet, useLocation, useParams } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import plyty_cnc from '../assets/images/cnc_photo.webp'
-import plyty_realizacje from '../assets/images/xD.jpg'
+import plyty_cnc from '../assets/images/cnc.webp'
+import plyty_realizacje from '../assets/images/realizations.webp'
 import plyty_zestawy from '../assets/images/headers/zestawy_bg.webp'
 import ScrollToSection from "../components/ScrollToSection";
 
